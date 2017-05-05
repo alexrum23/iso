@@ -1,0 +1,9 @@
+com\company\analyzer\Analyzer.class
+com\company\analyzer\ClassMetrics.class
+com\company\parser\EclEmmaParser.class
+com\company\parser\Parser.class
+com\company\Main.class
+com\company\Database.class
+com\company\parser\SourceMeterParser.class
+com\company\parser\FindBugsParser.class
+com\company\analyzer\Grade.class

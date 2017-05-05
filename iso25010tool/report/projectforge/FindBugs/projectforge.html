@@ -1,0 +1,3183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FindBugs Report</title>
+<style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+		    color: red;
+		    font-weight: bold;
+		}
+		.priority-2 {
+		    color: orange;
+		    font-weight: bold;
+		}
+		.priority-3 {
+		    color: green;
+		    font-weight: bold;
+		}
+		.priority-4 {
+		    color: blue;
+		    font-weight: bold;
+		}
+		</style>
+<script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+</head>
+<body>
+<h1>
+<a href="http://findbugs.sourceforge.net">FindBugs</a> Report</h1>
+<h2>Project Information</h2>
+<p>Project: 
+		123</p>
+<p>FindBugs version: 3.0.1</p>
+<p>Code analyzed:</p>
+<ul>
+<li>D:\Innopolis\Thesis\analyzedProjects\projectforge-master</li>
+</ul>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Metrics</h2>
+<p>0 lines of code analyzed,
+	in 0 classes, 
+	in 63 packages.</p>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Metric</th>
+<th align="right">Total</th>
+<th align="right">Density*</th>
+</tr>
+<tr class="tablerow0">
+<td>High Priority Warnings</td>
+<td align="right">69</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="tablerow1">
+<td>Medium Priority Warnings</td>
+<td align="right">89</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="tablerow1">
+<td>Low Priority Warnings</td>
+<td align="right">21</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="$totalClass">
+<td>
+<b>Total Warnings</b>
+</td>
+<td align="right">
+<b>179</b>
+</td>
+<td align="right">
+<b>0.00</b>
+</td>
+</tr>
+</table>
+<p>
+<i>(* Defects per Thousand lines of non-commenting source statements)</i>
+</p>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Contents</h2>
+<ul>
+<li>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</li>
+<li>
+<a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+</li>
+<li>
+<a href="#Warnings_MT_CORRECTNESS">Multithreaded correctness Warnings</a>
+</li>
+<li>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</li>
+<li>
+<a href="#Details">Details</a>
+</li>
+</ul>
+<h1>Summary</h1>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Warning Type</th>
+<th align="right">Number</th>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</td>
+<td align="right">36</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+</td>
+<td align="right">119</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_MT_CORRECTNESS">Multithreaded correctness Warnings</a>
+</td>
+<td align="right">19</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</td>
+<td align="right">5</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<b>Total</b>
+</td>
+<td align="right">
+<b>179</b>
+</td>
+</tr>
+</table>
+<h1>Warnings</h1>
+<p>Click on a warning row to see full context information.</p>
+<h2>
+<a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67446');">
+<td>
+<span class="priority-1">CN</span>
+</td>
+<td>org.projectforge.business.teamcal.event.model.TeamEventAttendeeDO defines clone() but doesn't implement Cloneable</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67446" style="display: none;">
+<a href="#CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE">Bug type CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE (click for details)</a>
+<br/>In class org.projectforge.business.teamcal.event.model.TeamEventAttendeeDO<br/>In method org.projectforge.business.teamcal.event.model.TeamEventAttendeeDO.clone()<br/>At TeamEventAttendeeDO.java:[lines 361-371]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69827');">
+<td>
+<span class="priority-1">CN</span>
+</td>
+<td>org.projectforge.framework.time.DateHolder.clone() does not call super.clone()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69827" style="display: none;">
+<a href="#CN_IDIOM_NO_SUPER_CALL">Bug type CN_IDIOM_NO_SUPER_CALL (click for details)</a>
+<br/>In class org.projectforge.framework.time.DateHolder<br/>In method org.projectforge.framework.time.DateHolder.clone()<br/>has subclass org.projectforge.framework.time.DayHolder<br/>At DateHolder.java:[lines 746-750]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66642');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>org.projectforge.business.ldap.MySSLSocketFactory.equals(Object) checks for operand being a javax.net.ssl.SSLSocketFactory </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66642" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.projectforge.business.ldap.MySSLSocketFactory<br/>In method org.projectforge.business.ldap.MySSLSocketFactory.equals(Object)<br/>Actual type javax.net.ssl.SSLSocketFactory<br/>At MySSLSocketFactory.java:[line 102]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74396');">
+<td>
+<span class="priority-2">ES</span>
+</td>
+<td>Comparison of String objects using == or != in org.projectforge.web.address.AddressImportForm.create() </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74396" style="display: none;">
+<a href="#ES_COMPARING_STRINGS_WITH_EQ">Bug type ES_COMPARING_STRINGS_WITH_EQ (click for details)</a>
+<br/>In class org.projectforge.web.address.AddressImportForm<br/>In method org.projectforge.web.address.AddressImportForm.create()<br/>Actual type String<br/>String constant ""<br/>Return value of org.projectforge.business.address.AddressDO.getAddressText() of type String<br/>At AddressImportForm.java:[line 150]<br/>Another occurrence at AddressImportForm.java:[line 152]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74496');">
+<td>
+<span class="priority-2">ES</span>
+</td>
+<td>Comparison of String objects using == or != in org.projectforge.web.address.AddressImportForm.create() </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74496" style="display: none;">
+<a href="#ES_COMPARING_STRINGS_WITH_EQ">Bug type ES_COMPARING_STRINGS_WITH_EQ (click for details)</a>
+<br/>In class org.projectforge.web.address.AddressImportForm<br/>In method org.projectforge.web.address.AddressImportForm.create()<br/>Actual type String<br/>String constant ""<br/>Return value of org.projectforge.business.address.AddressDO.getPostalAddressText() of type String<br/>At AddressImportForm.java:[line 157]<br/>Another occurrence at AddressImportForm.java:[line 161]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74596');">
+<td>
+<span class="priority-2">ES</span>
+</td>
+<td>Comparison of String objects using == or != in org.projectforge.web.address.AddressImportForm.create() </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74596" style="display: none;">
+<a href="#ES_COMPARING_STRINGS_WITH_EQ">Bug type ES_COMPARING_STRINGS_WITH_EQ (click for details)</a>
+<br/>In class org.projectforge.web.address.AddressImportForm<br/>In method org.projectforge.web.address.AddressImportForm.create()<br/>Actual type String<br/>String constant ""<br/>Return value of org.projectforge.business.address.AddressDO.getPrivateAddressText() of type String<br/>At AddressImportForm.java:[line 155]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74685');">
+<td>
+<span class="priority-2">ES</span>
+</td>
+<td>Comparison of String objects using == or != in org.projectforge.web.address.AddressImportForm.getSearchString(AddressDO) </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74685" style="display: none;">
+<a href="#ES_COMPARING_STRINGS_WITH_EQ">Bug type ES_COMPARING_STRINGS_WITH_EQ (click for details)</a>
+<br/>In class org.projectforge.web.address.AddressImportForm<br/>In method org.projectforge.web.address.AddressImportForm.getSearchString(AddressDO)<br/>Actual type String<br/>String constant ""<br/>Return value of org.projectforge.business.address.AddressDO.getBusinessPhone() of type String<br/>At AddressImportForm.java:[line 242]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74774');">
+<td>
+<span class="priority-2">ES</span>
+</td>
+<td>Comparison of String objects using == or != in org.projectforge.web.address.AddressImportForm.getSearchString(AddressDO) </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74774" style="display: none;">
+<a href="#ES_COMPARING_STRINGS_WITH_EQ">Bug type ES_COMPARING_STRINGS_WITH_EQ (click for details)</a>
+<br/>In class org.projectforge.web.address.AddressImportForm<br/>In method org.projectforge.web.address.AddressImportForm.getSearchString(AddressDO)<br/>Actual type String<br/>String constant ""<br/>Return value of org.projectforge.business.address.AddressDO.getEmail() of type String<br/>At AddressImportForm.java:[line 239]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74863');">
+<td>
+<span class="priority-2">ES</span>
+</td>
+<td>Comparison of String objects using == or != in org.projectforge.web.address.AddressImportForm.getSearchString(AddressDO) </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74863" style="display: none;">
+<a href="#ES_COMPARING_STRINGS_WITH_EQ">Bug type ES_COMPARING_STRINGS_WITH_EQ (click for details)</a>
+<br/>In class org.projectforge.web.address.AddressImportForm<br/>In method org.projectforge.web.address.AddressImportForm.getSearchString(AddressDO)<br/>Actual type String<br/>String constant ""<br/>Return value of org.projectforge.business.address.AddressDO.getMobilePhone() of type String<br/>At AddressImportForm.java:[line 236]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74952');">
+<td>
+<span class="priority-2">ES</span>
+</td>
+<td>Comparison of String objects using == or != in org.projectforge.web.address.AddressImportForm.getSearchString(AddressDO) </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74952" style="display: none;">
+<a href="#ES_COMPARING_STRINGS_WITH_EQ">Bug type ES_COMPARING_STRINGS_WITH_EQ (click for details)</a>
+<br/>In class org.projectforge.web.address.AddressImportForm<br/>In method org.projectforge.web.address.AddressImportForm.getSearchString(AddressDO)<br/>Actual type String<br/>String constant ""<br/>Return value of org.projectforge.business.address.AddressDO.getPrivateEmail() of type String<br/>At AddressImportForm.java:[line 245]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N78120');">
+<td>
+<span class="priority-1">Nm</span>
+</td>
+<td>The class name org.projectforge.web.wicket.converter.IntegerConverter shadows the simple name of the superclass org.apache.wicket.util.convert.converter.IntegerConverter</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N78120" style="display: none;">
+<a href="#NM_SAME_SIMPLE_NAME_AS_SUPERCLASS">Bug type NM_SAME_SIMPLE_NAME_AS_SUPERCLASS (click for details)</a>
+<br/>In class org.projectforge.web.wicket.converter.IntegerConverter<br/>In class org.apache.wicket.util.convert.converter.IntegerConverter<br/>At IntegerConverter.java:[lines 1-51]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65961');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>org.projectforge.business.address.BirthdayAddress.equals(Object) does not check for null argument</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65961" style="display: none;">
+<a href="#NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT">Bug type NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT (click for details)</a>
+<br/>In class org.projectforge.business.address.BirthdayAddress<br/>In method org.projectforge.business.address.BirthdayAddress.equals(Object)<br/>Parameter obj<br/>At BirthdayAddress.java:[line 68]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69143');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>org.projectforge.framework.configuration.entities.ConfigurationDO.getBooleanValue() has Boolean return type and returns explicit null</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69143" style="display: none;">
+<a href="#NP_BOOLEAN_RETURN_NULL">Bug type NP_BOOLEAN_RETURN_NULL (click for details)</a>
+<br/>In class org.projectforge.framework.configuration.entities.ConfigurationDO<br/>In method org.projectforge.framework.configuration.entities.ConfigurationDO.getBooleanValue()<br/>At ConfigurationDO.java:[line 290]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69986');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>org.projectforge.framework.utils.StackTraceHolder.toString() may return null</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69986" style="display: none;">
+<a href="#NP_TOSTRING_COULD_RETURN_NULL">Bug type NP_TOSTRING_COULD_RETURN_NULL (click for details)</a>
+<br/>In class org.projectforge.framework.utils.StackTraceHolder<br/>In method org.projectforge.framework.utils.StackTraceHolder.toString()<br/>At StackTraceHolder.java:[line 67]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N77749');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>org.projectforge.web.wicket.WicketUtils.getAsBooleanObject(PageParameters, String) has Boolean return type and returns explicit null</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N77749" style="display: none;">
+<a href="#NP_BOOLEAN_RETURN_NULL">Bug type NP_BOOLEAN_RETURN_NULL (click for details)</a>
+<br/>In class org.projectforge.web.wicket.WicketUtils<br/>In method org.projectforge.web.wicket.WicketUtils.getAsBooleanObject(PageParameters, String)<br/>At WicketUtils.java:[line 163]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66886');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.business.task.TaskTree defines non-transient non-serializable instance field accessDao</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66886" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.business.task.TaskTree<br/>Field org.projectforge.business.task.TaskTree.accessDao<br/>Actual type org.projectforge.framework.access.AccessDao<br/>In TaskTree.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66944');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.business.task.TaskTree defines non-transient non-serializable instance field auftragDao</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66944" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.business.task.TaskTree<br/>Field org.projectforge.business.task.TaskTree.auftragDao<br/>Actual type org.projectforge.business.fibu.AuftragDao<br/>In TaskTree.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67002');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.business.task.TaskTree defines non-transient non-serializable instance field projektDao</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67002" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.business.task.TaskTree<br/>Field org.projectforge.business.task.TaskTree.projektDao<br/>Actual type org.projectforge.business.fibu.ProjektDao<br/>In TaskTree.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67060');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.business.task.TaskTree defines non-transient non-serializable instance field taskDao</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67060" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.business.task.TaskTree<br/>Field org.projectforge.business.task.TaskTree.taskDao<br/>Actual type org.projectforge.business.task.TaskDao<br/>In TaskTree.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67118');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.business.task.TaskTree defines non-transient non-serializable instance field timesheetDao</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67118" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.business.task.TaskTree<br/>Field org.projectforge.business.task.TaskTree.timesheetDao<br/>Actual type org.projectforge.business.timesheet.TimesheetDao<br/>In TaskTree.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70188');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.plugins.crm.ContactPageSupport defines non-transient non-serializable instance field contactDao</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70188" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.crm.ContactPageSupport<br/>Field org.projectforge.plugins.crm.ContactPageSupport.contactDao<br/>Actual type org.projectforge.plugins.crm.ContactDao<br/>In ContactPageSupport.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70246');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.plugins.eed.ExtendEmployeeDataEnum defines non-transient non-serializable instance field attrColumnDescriptions</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70246" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.eed.ExtendEmployeeDataEnum<br/>Field org.projectforge.plugins.eed.ExtendEmployeeDataEnum.attrColumnDescriptions<br/>Actual type org.projectforge.export.AttrColumnDescription<br/>In ExtendEmployeeDataEnum.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72358');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.plugins.poll.NewPollFrontendModel defines non-transient non-serializable instance field pollAttendeeDao</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72358" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.poll.NewPollFrontendModel<br/>Field org.projectforge.plugins.poll.NewPollFrontendModel.pollAttendeeDao<br/>Actual type org.projectforge.plugins.poll.attendee.PollAttendeeDao<br/>In NewPollFrontendModel.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72416');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.plugins.poll.NewPollFrontendModel defines non-transient non-serializable instance field pollDao</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72416" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.poll.NewPollFrontendModel<br/>Field org.projectforge.plugins.poll.NewPollFrontendModel.pollDao<br/>Actual type org.projectforge.plugins.poll.PollDao<br/>In NewPollFrontendModel.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72474');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.plugins.poll.NewPollFrontendModel defines non-transient non-serializable instance field pollEventDao</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72474" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.poll.NewPollFrontendModel<br/>Field org.projectforge.plugins.poll.NewPollFrontendModel.pollEventDao<br/>Actual type org.projectforge.plugins.poll.event.PollEventDao<br/>In NewPollFrontendModel.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73067');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.plugins.skillmatrix.SkillTreeBuilder defines non-transient non-serializable instance field skillDao</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73067" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.SkillTreeBuilder<br/>Field org.projectforge.plugins.skillmatrix.SkillTreeBuilder.skillDao<br/>Actual type org.projectforge.plugins.skillmatrix.SkillDao<br/>In SkillTreeBuilder.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73347');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.plugins.skillmatrix.TrainingAttendeeListForm defines non-transient non-serializable instance field skillDao</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73347" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.TrainingAttendeeListForm<br/>Field org.projectforge.plugins.skillmatrix.TrainingAttendeeListForm.skillDao<br/>Actual type org.projectforge.plugins.skillmatrix.SkillDao<br/>In TrainingAttendeeListForm.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73405');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.plugins.skillmatrix.TrainingAttendeeListForm defines non-transient non-serializable instance field trainingDao</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73405" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.TrainingAttendeeListForm<br/>Field org.projectforge.plugins.skillmatrix.TrainingAttendeeListForm.trainingDao<br/>Actual type org.projectforge.plugins.skillmatrix.TrainingDao<br/>In TrainingAttendeeListForm.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73559');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.plugins.skillmatrix.TrainingListForm defines non-transient non-serializable instance field skillDao</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73559" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.TrainingListForm<br/>Field org.projectforge.plugins.skillmatrix.TrainingListForm.skillDao<br/>Actual type org.projectforge.plugins.skillmatrix.SkillDao<br/>In TrainingListForm.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73617');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.plugins.skillmatrix.TrainingListForm defines non-transient non-serializable instance field trainingDao</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73617" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.TrainingListForm<br/>Field org.projectforge.plugins.skillmatrix.TrainingListForm.trainingDao<br/>Actual type org.projectforge.plugins.skillmatrix.TrainingDao<br/>In TrainingListForm.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75041');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.web.address.AddressPageSupport defines non-transient non-serializable instance field addressDao</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75041" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.address.AddressPageSupport<br/>Field org.projectforge.web.address.AddressPageSupport.addressDao<br/>Actual type org.projectforge.business.address.AddressDao<br/>In AddressPageSupport.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74338');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.web.MenuBuilder defines non-transient non-serializable instance field userDao</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74338" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.MenuBuilder<br/>Field org.projectforge.web.MenuBuilder.userDao<br/>Actual type org.projectforge.business.user.UserDao<br/>In MenuBuilder.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76800');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.web.task.TaskTreeBuilder defines non-transient non-serializable instance field dateTimeFormatter</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76800" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.task.TaskTreeBuilder<br/>Field org.projectforge.web.task.TaskTreeBuilder.dateTimeFormatter<br/>Actual type org.projectforge.framework.time.DateTimeFormatter<br/>In TaskTreeBuilder.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76858');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.web.task.TaskTreeBuilder defines non-transient non-serializable instance field priorityFormatter</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76858" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.task.TaskTreeBuilder<br/>Field org.projectforge.web.task.TaskTreeBuilder.priorityFormatter<br/>Actual type org.projectforge.web.core.PriorityFormatter<br/>In TaskTreeBuilder.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76916');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.web.task.TaskTreeBuilder defines non-transient non-serializable instance field userFormatter</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76916" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.task.TaskTreeBuilder<br/>Field org.projectforge.web.task.TaskTreeBuilder.userFormatter<br/>Actual type org.projectforge.business.user.UserFormatter<br/>In TaskTreeBuilder.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77176');">
+<td>
+<span class="priority-1">Se</span>
+</td>
+<td>Class org.projectforge.web.timesheet.TimesheetPageSupport defines non-transient non-serializable instance field timesheetDao</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77176" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.timesheet.TimesheetPageSupport<br/>Field org.projectforge.web.timesheet.TimesheetPageSupport.timesheetDao<br/>Actual type org.projectforge.business.timesheet.TimesheetDao<br/>In TimesheetPageSupport.java</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_CORRECTNESS">Correctness Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76453');">
+<td>
+<span class="priority-2">BC</span>
+</td>
+<td>instanceof will always return false in new org.projectforge.web.mobile.RecentMobilePageInfo(AbstractSecuredMobilePage), since a String can't be a Integer</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76453" style="display: none;">
+<a href="#BC_IMPOSSIBLE_INSTANCEOF">Bug type BC_IMPOSSIBLE_INSTANCEOF (click for details)</a>
+<br/>In class org.projectforge.web.mobile.RecentMobilePageInfo<br/>In method new org.projectforge.web.mobile.RecentMobilePageInfo(AbstractSecuredMobilePage)<br/>Actual type String<br/>Expected Integer<br/>Value loaded from value<br/>At RecentMobilePageInfo.java:[line 65]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66260');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 0.19 in org.projectforge.business.fibu.RechnungDao.&lt;static initializer for RechnungDao&gt;()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66260" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.business.fibu.RechnungDao<br/>In method org.projectforge.business.fibu.RechnungDao.&lt;static initializer for RechnungDao&gt;()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 0.19<br/>Value 0.190000000000000002220446049250313080847263336181640625<br/>At RechnungDao.java:[line 81]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67933');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from -19.999 in org.projectforge.common.NumberHelperTest.setDefaultScale()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67933" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.common.NumberHelperTest<br/>In method org.projectforge.common.NumberHelperTest.setDefaultScale()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value -19.999<br/>Value -19.998999999999998777866494492627680301666259765625<br/>At NumberHelperTest.java:[line 176]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68025');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 19.999 in org.projectforge.common.NumberHelperTest.setDefaultScale()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68025" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.common.NumberHelperTest<br/>In method org.projectforge.common.NumberHelperTest.setDefaultScale()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 19.999<br/>Value 19.998999999999998777866494492627680301666259765625<br/>At NumberHelperTest.java:[line 169]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68117');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 99.99999 in org.projectforge.common.NumberHelperTest.setDefaultScale()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68117" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.common.NumberHelperTest<br/>In method org.projectforge.common.NumberHelperTest.setDefaultScale()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 99.99999<br/>Value 99.999989999999996825863490812480449676513671875<br/>At NumberHelperTest.java:[line 172]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68209');">
+<td>
+<span class="priority-3">DMI</span>
+</td>
+<td>BigDecimal constructed from -0.76274327 in org.projectforge.common.NumberHelperTest.setDefaultScale()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68209" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.common.NumberHelperTest<br/>In method org.projectforge.common.NumberHelperTest.setDefaultScale()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value -0.76274327<br/>Value -0.76274326999999997322987610459676943719387054443359375<br/>At NumberHelperTest.java:[line 175]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68301');">
+<td>
+<span class="priority-3">DMI</span>
+</td>
+<td>BigDecimal constructed from -100.000001 in org.projectforge.common.NumberHelperTest.setDefaultScale()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68301" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.common.NumberHelperTest<br/>In method org.projectforge.common.NumberHelperTest.setDefaultScale()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value -100.000001<br/>Value -100.0000009999999974752427078783512115478515625<br/>At NumberHelperTest.java:[line 181]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68393');">
+<td>
+<span class="priority-3">DMI</span>
+</td>
+<td>BigDecimal constructed from -20.000001 in org.projectforge.common.NumberHelperTest.setDefaultScale()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68393" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.common.NumberHelperTest<br/>In method org.projectforge.common.NumberHelperTest.setDefaultScale()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value -20.000001<br/>Value -20.000001000000001027956386678852140903472900390625<br/>At NumberHelperTest.java:[line 178]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68485');">
+<td>
+<span class="priority-3">DMI</span>
+</td>
+<td>BigDecimal constructed from -99.99999 in org.projectforge.common.NumberHelperTest.setDefaultScale()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68485" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.common.NumberHelperTest<br/>In method org.projectforge.common.NumberHelperTest.setDefaultScale()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value -99.99999<br/>Value -99.999989999999996825863490812480449676513671875<br/>At NumberHelperTest.java:[line 179]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68577');">
+<td>
+<span class="priority-3">DMI</span>
+</td>
+<td>BigDecimal constructed from 0.76274327 in org.projectforge.common.NumberHelperTest.setDefaultScale()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68577" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.common.NumberHelperTest<br/>In method org.projectforge.common.NumberHelperTest.setDefaultScale()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 0.76274327<br/>Value 0.76274326999999997322987610459676943719387054443359375<br/>At NumberHelperTest.java:[line 168]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68669');">
+<td>
+<span class="priority-3">DMI</span>
+</td>
+<td>BigDecimal constructed from 100.000001 in org.projectforge.common.NumberHelperTest.setDefaultScale()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68669" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.common.NumberHelperTest<br/>In method org.projectforge.common.NumberHelperTest.setDefaultScale()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 100.000001<br/>Value 100.0000009999999974752427078783512115478515625<br/>At NumberHelperTest.java:[line 174]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68761');">
+<td>
+<span class="priority-3">DMI</span>
+</td>
+<td>BigDecimal constructed from 20.000001 in org.projectforge.common.NumberHelperTest.setDefaultScale()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68761" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.common.NumberHelperTest<br/>In method org.projectforge.common.NumberHelperTest.setDefaultScale()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 20.000001<br/>Value 20.000001000000001027956386678852140903472900390625<br/>At NumberHelperTest.java:[line 171]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69011');">
+<td>
+<span class="priority-3">DMI</span>
+</td>
+<td>D'oh! A nonsensical invocation of assertEquals(Object, Object) in org.projectforge.fibu.EmployeeServiceTest.testInsertDelete()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69011" style="display: none;">
+<a href="#DMI_DOH">Bug type DMI_DOH (click for details)</a>
+<br/>In class org.projectforge.fibu.EmployeeServiceTest<br/>In method org.projectforge.fibu.EmployeeServiceTest.testInsertDelete()<br/>In method org.testng.Assert.assertEquals(Object, Object)<br/>Value Use "== null" to check for a value being null<br/>At EmployeeServiceTest.java:[line 49]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70577');">
+<td>
+<span class="priority-3">DMI</span>
+</td>
+<td>BigDecimal constructed from 0.9152941176470588 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplAverageCalculationTest.testAverageCalculation1()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70577" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplAverageCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplAverageCalculationTest.testAverageCalculation1()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 0.9152941176470588<br/>Value 0.9152941176470588136027117798221297562122344970703125<br/>At FFPEventServiceImplAverageCalculationTest.java:[line 45]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70669');">
+<td>
+<span class="priority-3">DMI</span>
+</td>
+<td>BigDecimal constructed from 18.401282051282053 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplAverageCalculationTest.testAverageCalculation2()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70669" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplAverageCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplAverageCalculationTest.testAverageCalculation2()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 18.401282051282053<br/>Value 18.4012820512820525209463085047900676727294921875<br/>At FFPEventServiceImplAverageCalculationTest.java:[line 56]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70761');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 0.16 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation1()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70761" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation1()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 0.16<br/>Value 0.1600000000000000033306690738754696212708950042724609375<br/>At FFPEventServiceImplDebtCalculationTest.java:[line 56]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70853');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 0.69 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation1()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70853" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation1()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 0.69<br/>Value 0.689999999999999946709294817992486059665679931640625<br/>At FFPEventServiceImplDebtCalculationTest.java:[line 55]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70945');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 1.21 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation1()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70945" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation1()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 1.21<br/>Value 1.20999999999999996447286321199499070644378662109375<br/>At FFPEventServiceImplDebtCalculationTest.java:[line 49]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71037');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 2.68 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation1()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71037" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation1()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 2.68<br/>Value 2.680000000000000159872115546022541821002960205078125<br/>At FFPEventServiceImplDebtCalculationTest.java:[line 50]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71129');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 1.23 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71129" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 1.23<br/>Value 1.229999999999999982236431605997495353221893310546875<br/>At FFPEventServiceImplDebtCalculationTest.java:[line 67]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71221');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 123.45 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71221" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 123.45<br/>Value 123.4500000000000028421709430404007434844970703125<br/>At FFPEventServiceImplDebtCalculationTest.java:[line 68]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71313');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 19.11 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71313" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 19.11<br/>Value 19.1099999999999994315658113919198513031005859375<br/>At FFPEventServiceImplDebtCalculationTest.java:[line 77]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71405');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 434.27 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71405" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 434.27<br/>Value 434.26999999999998181010596454143524169921875<br/>At FFPEventServiceImplDebtCalculationTest.java:[line 75]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71497');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 456.9 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71497" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 456.9<br/>Value 456.8999999999999772626324556767940521240234375<br/>At FFPEventServiceImplDebtCalculationTest.java:[line 67]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71589');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 5.67 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71589" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 5.67<br/>Value 5.6699999999999999289457264239899814128875732421875<br/>At FFPEventServiceImplDebtCalculationTest.java:[line 68]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71681');">
+<td>
+<span class="priority-2">DMI</span>
+</td>
+<td>BigDecimal constructed from 567.89 in org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71681" style="display: none;">
+<a href="#DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">Bug type DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest<br/>In method org.projectforge.plugins.ffp.repository.FFPEventServiceImplDebtCalculationTest.testDebtCalculation2()<br/>Called method new java.math.BigDecimal(double)<br/>Did you intend to invoke java.math.BigDecimal.valueOf(double)<br/>Value 567.89<br/>Value 567.8899999999999863575794734060764312744140625<br/>At FFPEventServiceImplDebtCalculationTest.java:[line 69]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73963');">
+<td>
+<span class="priority-1">EC</span>
+</td>
+<td>Call to Integer.equals(Long) in org.projectforge.test.AbstractTestBase.assertHistoryEntry(HistoryEntry, Integer, PFUserDO, EntityOpType, String, Class, Object, Object)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73963" style="display: none;">
+<a href="#EC_UNRELATED_TYPES">Bug type EC_UNRELATED_TYPES (click for details)</a>
+<br/>In class org.projectforge.test.AbstractTestBase<br/>In method org.projectforge.test.AbstractTestBase.assertHistoryEntry(HistoryEntry, Integer, PFUserDO, EntityOpType, String, Class, Object, Object)<br/>Actual type Long<br/>Expected Integer<br/>Return value of de.micromata.genome.db.jpa.history.api.HistoryEntry.getEntityId() of type Long<br/>Value loaded from entityId<br/>Integer.equals(Object) used to determine equality<br/>Called method org.testng.AssertJUnit.assertEquals(Object, Object)<br/>At AbstractTestBase.java:[line 352]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67727');">
+<td>
+<span class="priority-1">IL</span>
+</td>
+<td>There is an apparent infinite recursive loop in org.projectforge.business.user.UserRightId.compareTo(IUserRightId)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67727" style="display: none;">
+<a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+<br/>In class org.projectforge.business.user.UserRightId<br/>In method org.projectforge.business.user.UserRightId.compareTo(IUserRightId)<br/>At UserRightId.java:[line 160]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70136');">
+<td>
+<span class="priority-1">IL</span>
+</td>
+<td>There is an apparent infinite recursive loop in org.projectforge.plugins.banking.BankingPluginUserRightsId.compareTo(IUserRightId)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70136" style="display: none;">
+<a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+<br/>In class org.projectforge.plugins.banking.BankingPluginUserRightsId<br/>In method org.projectforge.plugins.banking.BankingPluginUserRightsId.compareTo(IUserRightId)<br/>At BankingPluginUserRightsId.java:[line 67]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70304');">
+<td>
+<span class="priority-1">IL</span>
+</td>
+<td>There is an apparent infinite recursive loop in org.projectforge.plugins.eed.ExtendEmployeeDataPluginUserRightId.compareTo(IUserRightId)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70304" style="display: none;">
+<a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+<br/>In class org.projectforge.plugins.eed.ExtendEmployeeDataPluginUserRightId<br/>In method org.projectforge.plugins.eed.ExtendEmployeeDataPluginUserRightId.compareTo(IUserRightId)<br/>At ExtendEmployeeDataPluginUserRightId.java:[line 73]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70525');">
+<td>
+<span class="priority-1">IL</span>
+</td>
+<td>There is an apparent infinite recursive loop in org.projectforge.plugins.ffp.FinancialFairPlayPluginUserRightId.compareTo(IUserRightId)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70525" style="display: none;">
+<a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+<br/>In class org.projectforge.plugins.ffp.FinancialFairPlayPluginUserRightId<br/>In method org.projectforge.plugins.ffp.FinancialFairPlayPluginUserRightId.compareTo(IUserRightId)<br/>At FinancialFairPlayPluginUserRightId.java:[line 73]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71773');">
+<td>
+<span class="priority-1">IL</span>
+</td>
+<td>There is an apparent infinite recursive loop in org.projectforge.plugins.ihkexport.IhkExportPluginUserRightId.compareTo(IUserRightId)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71773" style="display: none;">
+<a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+<br/>In class org.projectforge.plugins.ihkexport.IhkExportPluginUserRightId<br/>In method org.projectforge.plugins.ihkexport.IhkExportPluginUserRightId.compareTo(IUserRightId)<br/>At IhkExportPluginUserRightId.java:[line 73]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71992');">
+<td>
+<span class="priority-1">IL</span>
+</td>
+<td>There is an apparent infinite recursive loop in org.projectforge.plugins.licensemanagement.LicensemanagementPluginUserRightsId.compareTo(IUserRightId)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71992" style="display: none;">
+<a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+<br/>In class org.projectforge.plugins.licensemanagement.LicensemanagementPluginUserRightsId<br/>In method org.projectforge.plugins.licensemanagement.LicensemanagementPluginUserRightsId.compareTo(IUserRightId)<br/>At LicensemanagementPluginUserRightsId.java:[line 67]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72112');">
+<td>
+<span class="priority-1">IL</span>
+</td>
+<td>There is an apparent infinite recursive loop in org.projectforge.plugins.liquidityplanning.LiquidityplanningPluginUserRightId.compareTo(IUserRightId)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72112" style="display: none;">
+<a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+<br/>In class org.projectforge.plugins.liquidityplanning.LiquidityplanningPluginUserRightId<br/>In method org.projectforge.plugins.liquidityplanning.LiquidityplanningPluginUserRightId.compareTo(IUserRightId)<br/>At LiquidityplanningPluginUserRightId.java:[line 96]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72254');">
+<td>
+<span class="priority-1">IL</span>
+</td>
+<td>There is an apparent infinite recursive loop in org.projectforge.plugins.marketing.MarketingPluginUserRightId.compareTo(IUserRightId)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72254" style="display: none;">
+<a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+<br/>In class org.projectforge.plugins.marketing.MarketingPluginUserRightId<br/>In method org.projectforge.plugins.marketing.MarketingPluginUserRightId.compareTo(IUserRightId)<br/>At MarketingPluginUserRightId.java:[line 100]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72306');">
+<td>
+<span class="priority-1">IL</span>
+</td>
+<td>There is an apparent infinite recursive loop in org.projectforge.plugins.memo.MemoPluginUserRightId.compareTo(IUserRightId)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72306" style="display: none;">
+<a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+<br/>In class org.projectforge.plugins.memo.MemoPluginUserRightId<br/>In method org.projectforge.plugins.memo.MemoPluginUserRightId.compareTo(IUserRightId)<br/>At MemoPluginUserRightId.java:[line 95]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72532');">
+<td>
+<span class="priority-1">IL</span>
+</td>
+<td>There is an apparent infinite recursive loop in org.projectforge.plugins.poll.PollPluginUserRightId.compareTo(IUserRightId)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72532" style="display: none;">
+<a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+<br/>In class org.projectforge.plugins.poll.PollPluginUserRightId<br/>In method org.projectforge.plugins.poll.PollPluginUserRightId.compareTo(IUserRightId)<br/>At PollPluginUserRightId.java:[line 100]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73295');">
+<td>
+<span class="priority-1">IL</span>
+</td>
+<td>There is an apparent infinite recursive loop in org.projectforge.plugins.skillmatrix.SkillmatrixPluginUserRightId.compareTo(IUserRightId)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73295" style="display: none;">
+<a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.SkillmatrixPluginUserRightId<br/>In method org.projectforge.plugins.skillmatrix.SkillmatrixPluginUserRightId.compareTo(IUserRightId)<br/>At SkillmatrixPluginUserRightId.java:[line 106]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73911');">
+<td>
+<span class="priority-1">IL</span>
+</td>
+<td>There is an apparent infinite recursive loop in org.projectforge.plugins.todo.TodoPluginUserRightId.compareTo(IUserRightId)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73911" style="display: none;">
+<a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+<br/>In class org.projectforge.plugins.todo.TodoPluginUserRightId<br/>In method org.projectforge.plugins.todo.TodoPluginUserRightId.compareTo(IUserRightId)<br/>At TodoPluginUserRightId.java:[line 96]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70356');">
+<td>
+<span class="priority-3">MF</span>
+</td>
+<td>Field EmployeeBillingImportForm.fileUploadField masks field in superclass org.projectforge.web.core.importstorage.AbstractImportForm</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70356" style="display: none;">
+<a href="#MF_CLASS_MASKS_FIELD">Bug type MF_CLASS_MASKS_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.eed.wicket.EmployeeBillingImportForm<br/>Masking field org.projectforge.plugins.eed.wicket.EmployeeBillingImportForm.fileUploadField<br/>Masked field org.projectforge.web.core.importstorage.AbstractImportForm.fileUploadField<br/>In EmployeeBillingImportForm.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70416');">
+<td>
+<span class="priority-3">MF</span>
+</td>
+<td>Field EmployeeSalaryImportForm.fileUploadField masks field in superclass org.projectforge.web.core.importstorage.AbstractImportForm</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70416" style="display: none;">
+<a href="#MF_CLASS_MASKS_FIELD">Bug type MF_CLASS_MASKS_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.eed.wicket.EmployeeSalaryImportForm<br/>Masking field org.projectforge.plugins.eed.wicket.EmployeeSalaryImportForm.fileUploadField<br/>Masked field org.projectforge.web.core.importstorage.AbstractImportForm.fileUploadField<br/>In EmployeeSalaryImportForm.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74083');">
+<td>
+<span class="priority-3">MF</span>
+</td>
+<td>Field SpringBeanTest.applicationContext masks field in superclass org.projectforge.test.AbstractTestBase</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74083" style="display: none;">
+<a href="#MF_CLASS_MASKS_FIELD">Bug type MF_CLASS_MASKS_FIELD (click for details)</a>
+<br/>In class org.projectforge.test.poorman.SpringBeanTest<br/>Masking field org.projectforge.test.poorman.SpringBeanTest.applicationContext<br/>Masked field org.projectforge.test.AbstractTestBase.applicationContext<br/>In SpringBeanTest.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75799');">
+<td>
+<span class="priority-2">MF</span>
+</td>
+<td>Field DatevImportForm.fileUploadField masks field in superclass org.projectforge.web.core.importstorage.AbstractImportForm</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75799" style="display: none;">
+<a href="#MF_CLASS_MASKS_FIELD">Bug type MF_CLASS_MASKS_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.fibu.DatevImportForm<br/>Masking field org.projectforge.web.fibu.DatevImportForm.fileUploadField<br/>Masked field org.projectforge.web.core.importstorage.AbstractImportForm.fileUploadField<br/>In DatevImportForm.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77045');">
+<td>
+<span class="priority-2">MF</span>
+</td>
+<td>Field TeamCalImportForm.fileUploadField masks field in superclass org.projectforge.web.core.importstorage.AbstractImportForm</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77045" style="display: none;">
+<a href="#MF_CLASS_MASKS_FIELD">Bug type MF_CLASS_MASKS_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.teamcal.event.importics.TeamCalImportForm<br/>Masking field org.projectforge.web.teamcal.event.importics.TeamCalImportForm.fileUploadField<br/>Masked field org.projectforge.web.core.importstorage.AbstractImportForm.fileUploadField<br/>In TeamCalImportForm.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66563');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of LdapLoginHandler.ldapConfig in org.projectforge.business.ldap.LdapLoginHandler.initialize()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66563" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.business.ldap.LdapLoginHandler<br/>In method org.projectforge.business.ldap.LdapLoginHandler.initialize()<br/>Value contained in org.projectforge.business.ldap.LdapLoginHandler.ldapConfig<br/>Dereferenced at LdapLoginHandler.java:[line 81]<br/>Known null at LdapLoginHandler.java:[line 77]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66706');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of list in org.projectforge.business.multitenancy.TenantDao.getDefaultTenant()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66706" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.business.multitenancy.TenantDao<br/>In method org.projectforge.business.multitenancy.TenantDao.getDefaultTenant()<br/>Value loaded from list<br/>Dereferenced at TenantDao.java:[line 93]<br/>Known null at TenantDao.java:[line 90]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67176');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of dao in org.projectforge.business.teamcal.admin.TeamCalCache.refresh()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67176" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.business.teamcal.admin.TeamCalCache<br/>In method org.projectforge.business.teamcal.admin.TeamCalCache.refresh()<br/>Value loaded from dao<br/>Dereferenced at TeamCalCache.java:[line 155]<br/>Known null at TeamCalCache.java:[line 150]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67498');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of calendar in org.projectforge.business.teamcal.event.right.TeamEventRight.hasUpdateAccess(PFUserDO, TeamCalDO)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67498" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.business.teamcal.event.right.TeamEventRight<br/>In method org.projectforge.business.teamcal.event.right.TeamEventRight.hasUpdateAccess(PFUserDO, TeamCalDO)<br/>Value loaded from calendar<br/>Dereferenced at TeamEventRight.java:[line 157]<br/>Known null at TeamEventRight.java:[line 154]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67247');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Null passed for non-null parameter of getRepeatText(RRule) in org.projectforge.business.teamcal.event.TeamEventServiceImpl.sendMail(TeamEventDO, TeamEventAttendeeDO, String)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67247" style="display: none;">
+<a href="#NP_NULL_PARAM_DEREF">Bug type NP_NULL_PARAM_DEREF (click for details)</a>
+<br/>In class org.projectforge.business.teamcal.event.TeamEventServiceImpl<br/>In method org.projectforge.business.teamcal.event.TeamEventServiceImpl.sendMail(TeamEventDO, TeamEventAttendeeDO, String)<br/>Called method org.projectforge.business.teamcal.event.TeamEventServiceImpl.getRepeatText(RRule)<br/>Argument 1 might be null but must not be null<br/>Value loaded from rRule<br/>Method invoked at TeamEventServiceImpl.java:[line 294]<br/>Null value at TeamEventServiceImpl.java:[line 286]<br/>Known null at TeamEventServiceImpl.java:[line 291]<br/>Known null at TeamEventServiceImpl.java:[line 292]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67569');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of dtStart in org.projectforge.business.teamcal.service.TeamCalServiceImpl.createTeamEventDO(VEvent, TimeZone, boolean)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67569" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.business.teamcal.service.TeamCalServiceImpl<br/>In method org.projectforge.business.teamcal.service.TeamCalServiceImpl.createTeamEventDO(VEvent, TimeZone, boolean)<br/>Value loaded from dtStart<br/>Dereferenced at TeamCalServiceImpl.java:[line 656]<br/>Known null at TeamCalServiceImpl.java:[line 652]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67859');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of constructor in org.projectforge.common.BeanHelper.newInstance(Class, Class[], Object[]) on exception path</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67859" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH_EXCEPTION">Bug type NP_NULL_ON_SOME_PATH_EXCEPTION (click for details)</a>
+<br/>In class org.projectforge.common.BeanHelper<br/>In method org.projectforge.common.BeanHelper.newInstance(Class, Class[], Object[])<br/>Value loaded from constructor<br/>Dereferenced at BeanHelper.java:[line 394]<br/>Known null at BeanHelper.java:[line 386]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69417');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of destEntry in org.projectforge.framework.persistence.jpa.impl.BaseDaoJpaAdapter.copyDeclaredFields(Class, BaseDO, BaseDO, String[])</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69417" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.framework.persistence.jpa.impl.BaseDaoJpaAdapter<br/>In method org.projectforge.framework.persistence.jpa.impl.BaseDaoJpaAdapter.copyDeclaredFields(Class, BaseDO, BaseDO, String[])<br/>Value loaded from destEntry<br/>Dereferenced at BaseDaoJpaAdapter.java:[line 358]<br/>Null value at BaseDaoJpaAdapter.java:[line 350]<br/>Known null at BaseDaoJpaAdapter.java:[line 351]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69890');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of result in org.projectforge.framework.utils.NumberHelper.parseLong(String) on exception path</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69890" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH_EXCEPTION">Bug type NP_NULL_ON_SOME_PATH_EXCEPTION (click for details)</a>
+<br/>In class org.projectforge.framework.utils.NumberHelper<br/>In method org.projectforge.framework.utils.NumberHelper.parseLong(String)<br/>Value loaded from result<br/>Dereferenced at NumberHelper.java:[line 229]<br/>Null value at NumberHelper.java:[line 223]<br/>Known null at NumberHelper.java:[line 226]<br/>Known null at NumberHelper.java:[line 227]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72164');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Null passed for non-null parameter of org.projectforge.business.address.AddressDao.hasAccess(PFUserDO, AddressDO, AddressDO, OperationType, boolean) in org.projectforge.plugins.marketing.AddressCampaignValueRight.hasAccess(PFUserDO, AddressCampaignValueDO, AddressCampaignValueDO, OperationType)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72164" style="display: none;">
+<a href="#NP_NULL_PARAM_DEREF">Bug type NP_NULL_PARAM_DEREF (click for details)</a>
+<br/>In class org.projectforge.plugins.marketing.AddressCampaignValueRight<br/>In method org.projectforge.plugins.marketing.AddressCampaignValueRight.hasAccess(PFUserDO, AddressCampaignValueDO, AddressCampaignValueDO, OperationType)<br/>Called method org.projectforge.business.address.AddressDao.hasAccess(PFUserDO, AddressDO, AddressDO, OperationType, boolean)<br/>Argument 2 might be null but must not be null<br/>Constant value null<br/>Method invoked at AddressCampaignValueRight.java:[line 62]<br/>Known null at AddressCampaignValueRight.java:[line 62]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72821');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of org.projectforge.web.wicket.AbstractEditForm.data in org.projectforge.plugins.skillmatrix.SkillRatingEditForm$3.isVisible()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72821" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.SkillRatingEditForm$3<br/>In method org.projectforge.plugins.skillmatrix.SkillRatingEditForm$3.isVisible()<br/>Value contained in org.projectforge.web.wicket.AbstractEditForm.data<br/>Dereferenced at SkillRatingEditForm.java:[line 206]<br/>Known null at SkillRatingEditForm.java:[line 204]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73125');">
+<td>
+<span class="priority-1">NP</span>
+</td>
+<td>Non-virtual method call in org.projectforge.plugins.skillmatrix.SkillTreeTable.reload() passes null for non-null parameter of new SkillTreeTableNode(SkillTreeTableNode, SkillNode)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73125" style="display: none;">
+<a href="#NP_NULL_PARAM_DEREF_NONVIRTUAL">Bug type NP_NULL_PARAM_DEREF_NONVIRTUAL (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.SkillTreeTable<br/>In method org.projectforge.plugins.skillmatrix.SkillTreeTable.reload()<br/>Called method new org.projectforge.plugins.skillmatrix.SkillTreeTableNode(SkillTreeTableNode, SkillNode)<br/>At SkillTreeTable.java:[line 96]<br/>Argument 1 is definitely null but must not be null</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73210');">
+<td>
+<span class="priority-1">NP</span>
+</td>
+<td>Non-virtual method call in org.projectforge.plugins.skillmatrix.SkillTreeTable.reload() passes null for non-null parameter of new SkillTreeTableNode(SkillTreeTableNode, SkillNode)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73210" style="display: none;">
+<a href="#NP_NULL_PARAM_DEREF_NONVIRTUAL">Bug type NP_NULL_PARAM_DEREF_NONVIRTUAL (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.SkillTreeTable<br/>In method org.projectforge.plugins.skillmatrix.SkillTreeTable.reload()<br/>Called method new org.projectforge.plugins.skillmatrix.SkillTreeTableNode(SkillTreeTableNode, SkillNode)<br/>At SkillTreeTable.java:[line 98]<br/>Argument 1 is definitely null but must not be null</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75099');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of AddressViewPage.address in new org.projectforge.web.address.AddressViewPage(PageParameters, AbstractSecuredPage)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75099" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.web.address.AddressViewPage<br/>In method new org.projectforge.web.address.AddressViewPage(PageParameters, AbstractSecuredPage)<br/>Value contained in org.projectforge.web.address.AddressViewPage.address<br/>Dereferenced at AddressViewPage.java:[line 146]<br/>Known null at AddressViewPage.java:[line 78]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76654');">
+<td>
+<span class="priority-1">NP</span>
+</td>
+<td>Null pointer dereference of ? in new org.projectforge.web.selenium.SeleniumSuiteTestBase()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76654" style="display: none;">
+<a href="#NP_ALWAYS_NULL">Bug type NP_ALWAYS_NULL (click for details)</a>
+<br/>In class org.projectforge.web.selenium.SeleniumSuiteTestBase<br/>In method new org.projectforge.web.selenium.SeleniumSuiteTestBase()<br/>Local variable stored in JVM register ?<br/>Dereferenced at SeleniumSuiteTestBase.java:[line 48]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76974');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of activeTemplateEntry in org.projectforge.web.teamcal.dialog.TeamCalFilterDialog.myClose(AjaxRequestTarget)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76974" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.web.teamcal.dialog.TeamCalFilterDialog<br/>In method org.projectforge.web.teamcal.dialog.TeamCalFilterDialog.myClose(AjaxRequestTarget)<br/>Value loaded from activeTemplateEntry<br/>Dereferenced at TeamCalFilterDialog.java:[line 310]<br/>Known null at TeamCalFilterDialog.java:[line 307]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N77105');">
+<td>
+<span class="priority-1">NP</span>
+</td>
+<td>Possible null pointer dereference of task in org.projectforge.web.timesheet.TimesheetEditSelectRecentDialogPanel$3.populateItem(Item, String, IModel)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N77105" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.web.timesheet.TimesheetEditSelectRecentDialogPanel$3<br/>In method org.projectforge.web.timesheet.TimesheetEditSelectRecentDialogPanel$3.populateItem(Item, String, IModel)<br/>Value loaded from task<br/>Dereferenced at TimesheetEditSelectRecentDialogPanel.java:[line 192]<br/>Known null at TimesheetEditSelectRecentDialogPanel.java:[line 188]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77880');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of usage in new org.projectforge.web.wicket.components.ConsumptionBarPanel(String, BigDecimal, BigDecimal, Integer, boolean, String, boolean)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77880" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.web.wicket.components.ConsumptionBarPanel<br/>In method new org.projectforge.web.wicket.components.ConsumptionBarPanel(String, BigDecimal, BigDecimal, Integer, boolean, String, boolean)<br/>Value loaded from usage<br/>Dereferenced at ConsumptionBarPanel.java:[line 110]<br/>Known null at ConsumptionBarPanel.java:[line 105]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N78049');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of years in new org.projectforge.web.wicket.components.YearListCoiceRenderer(int[], boolean)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N78049" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.web.wicket.components.YearListCoiceRenderer<br/>In method new org.projectforge.web.wicket.components.YearListCoiceRenderer(int[], boolean)<br/>Value loaded from years<br/>Dereferenced at YearListCoiceRenderer.java:[line 69]<br/>Known null at YearListCoiceRenderer.java:[line 65]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77801');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of WicketUtils$1.val$text in org.projectforge.web.wicket.WicketUtils$1.getObject()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77801" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class org.projectforge.web.wicket.WicketUtils$1<br/>In method org.projectforge.web.wicket.WicketUtils$1.getObject()<br/>Value contained in org.projectforge.web.wicket.WicketUtils$1.val$text<br/>Dereferenced at WicketUtils.java:[line 910]<br/>Known null at WicketUtils.java:[line 906]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66777');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.business.task.TaskTest.readTotalDuration()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66777" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.business.task.TaskTest<br/>In method org.projectforge.business.task.TaskTest.readTotalDuration()<br/>Actual type Integer<br/>Return value of org.projectforge.framework.persistence.entities.DefaultBaseDO.getId() of type Integer<br/>Value loaded from taskId<br/>At TaskTest.java:[line 489]<br/>Another occurrence at TaskTest.java:[line 494]<br/>Another occurrence at TaskTest.java:[line 499]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67640');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.business.timesheet.TimesheetUtils.getStats(Collection, Date, Date, Integer)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67640" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.business.timesheet.TimesheetUtils<br/>In method org.projectforge.business.timesheet.TimesheetUtils.getStats(Collection, Date, Date, Integer)<br/>Actual type Integer<br/>Return value of org.projectforge.business.timesheet.TimesheetDO.getUserId() of type Integer<br/>Value loaded from userId<br/>At TimesheetUtils.java:[line 70]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68853');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Short references in org.projectforge.excel.CellFormat.equals(Object)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68853" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.excel.CellFormat<br/>In method org.projectforge.excel.CellFormat.equals(Object)<br/>Actual type Short<br/>Value loaded from field org.projectforge.excel.CellFormat.alignment<br/>At CellFormat.java:[line 175]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68932');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Short references in org.projectforge.excel.CellFormat.equals(Object)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68932" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.excel.CellFormat<br/>In method org.projectforge.excel.CellFormat.equals(Object)<br/>Actual type Short<br/>Value loaded from field org.projectforge.excel.CellFormat.fillForegroundColor<br/>At CellFormat.java:[line 179]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72584');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.plugins.skillmatrix.SkillEditPage.addTopMenuPanel()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72584" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.SkillEditPage<br/>In method org.projectforge.plugins.skillmatrix.SkillEditPage.addTopMenuPanel()<br/>Actual type Integer<br/>Value loaded from j<br/>Value loaded from i<br/>At SkillEditPage.java:[line 155]<br/>Another occurrence at SkillEditPage.java:[line 183]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72673');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.plugins.skillmatrix.SkillRatingEditForm.init()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72673" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.SkillRatingEditForm<br/>In method org.projectforge.plugins.skillmatrix.SkillRatingEditForm.init()<br/>Actual type Integer<br/>Value loaded from j<br/>Value loaded from i<br/>At SkillRatingEditForm.java:[line 118]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72901');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.plugins.skillmatrix.SkillSelectPanel.onBeforeRender()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72901" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.SkillSelectPanel<br/>In method org.projectforge.plugins.skillmatrix.SkillSelectPanel.onBeforeRender()<br/>Actual type Integer<br/>Value loaded from skillId<br/>Value loaded from field org.projectforge.plugins.skillmatrix.SkillSelectPanel.currentSkillId<br/>At SkillSelectPanel.java:[line 128]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72987');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.plugins.skillmatrix.SkillTextSelectPanel$1.convertInput()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72987" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.SkillTextSelectPanel$1<br/>In method org.projectforge.plugins.skillmatrix.SkillTextSelectPanel$1.convertInput()<br/>Actual type Integer<br/>Return value of org.projectforge.framework.persistence.entities.DefaultBaseDO.getId() of type Integer<br/>At SkillTextSelectPanel.java:[line 132]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73463');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.plugins.skillmatrix.TrainingAttendeeRight.hasAccess(PFUserDO, TrainingAttendeeDO, TrainingAttendeeDO, OperationType)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73463" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.TrainingAttendeeRight<br/>In method org.projectforge.plugins.skillmatrix.TrainingAttendeeRight.hasAccess(PFUserDO, TrainingAttendeeDO, TrainingAttendeeDO, OperationType)<br/>Actual type Integer<br/>Return value of org.projectforge.plugins.skillmatrix.TrainingAttendeeDO.getAttendeeId() of type Integer<br/>Return value of org.projectforge.framework.persistence.entities.DefaultBaseDO.getId() of type Integer<br/>At TrainingAttendeeRight.java:[line 84]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73675');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.plugins.skillmatrix.TrainingSelectPanel$1.convertInput()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73675" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.TrainingSelectPanel$1<br/>In method org.projectforge.plugins.skillmatrix.TrainingSelectPanel$1.convertInput()<br/>Actual type Integer<br/>Return value of org.projectforge.framework.persistence.entities.DefaultBaseDO.getId() of type Integer<br/>At TrainingSelectPanel.java:[line 131]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N73755');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.plugins.todo.ToDoDao.sendNotification(ToDoDO, String)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N73755" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.plugins.todo.ToDoDao<br/>In method org.projectforge.plugins.todo.ToDoDao.sendNotification(ToDoDO, String)<br/>Actual type Integer<br/>Value loaded from assigneeId<br/>Value loaded from userId<br/>At ToDoDao.java:[line 204]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N73833');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.plugins.todo.ToDoDao.sendNotification(ToDoDO, String)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N73833" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.plugins.todo.ToDoDao<br/>In method org.projectforge.plugins.todo.ToDoDao.sendNotification(ToDoDO, String)<br/>Actual type Integer<br/>Value loaded from reporterId<br/>Value loaded from userId<br/>At ToDoDao.java:[line 204]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75908');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.web.fibu.EmployeeSelectPanel$1.convertInput()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75908" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.web.fibu.EmployeeSelectPanel$1<br/>In method org.projectforge.web.fibu.EmployeeSelectPanel$1.convertInput()<br/>Actual type Integer<br/>Return value of org.projectforge.framework.persistence.entities.DefaultBaseDO.getId() of type Integer<br/>At EmployeeSelectPanel.java:[line 146]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75988');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.web.fibu.InvoicePositionsPanel.init(Set)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75988" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.web.fibu.InvoicePositionsPanel<br/>In method org.projectforge.web.fibu.InvoicePositionsPanel.init(Set)<br/>Actual type Integer<br/>Value loaded from invoiceNumber<br/>Return value of org.projectforge.business.fibu.RechnungsPositionVO.getRechnungNummer() of type Integer<br/>At InvoicePositionsPanel.java:[line 81]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76075');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.web.fibu.NewCustomerSelectPanel$1.convertInput()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76075" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.web.fibu.NewCustomerSelectPanel$1<br/>In method org.projectforge.web.fibu.NewCustomerSelectPanel$1.convertInput()<br/>Actual type Integer<br/>Return value of org.projectforge.business.fibu.KundeDO.getId() of type Integer<br/>At NewCustomerSelectPanel.java:[line 143]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76155');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.web.fibu.NewProjektSelectPanel$1.convertInput()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76155" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.web.fibu.NewProjektSelectPanel$1<br/>In method org.projectforge.web.fibu.NewProjektSelectPanel$1.convertInput()<br/>Actual type Integer<br/>Return value of org.projectforge.framework.persistence.entities.DefaultBaseDO.getId() of type Integer<br/>At NewProjektSelectPanel.java:[line 149]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74258');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in new org.projectforge.web.LoginPage(PageParameters)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74258" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.web.LoginPage<br/>In method new org.projectforge.web.LoginPage(PageParameters)<br/>Actual type Integer<br/>Return value of org.projectforge.framework.persistence.entities.DefaultBaseDO.getId() of type Integer<br/>At LoginPage.java:[line 161]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76373');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in new org.projectforge.web.mobile.LoginMobilePage(PageParameters)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76373" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.web.mobile.LoginMobilePage<br/>In method new org.projectforge.web.mobile.LoginMobilePage(PageParameters)<br/>Actual type Integer<br/>Return value of org.projectforge.framework.persistence.entities.DefaultBaseDO.getId() of type Integer<br/>At LoginMobilePage.java:[line 72]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76714');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.web.task.TaskSelectPanel.onBeforeRender()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76714" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.web.task.TaskSelectPanel<br/>In method org.projectforge.web.task.TaskSelectPanel.onBeforeRender()<br/>Actual type Integer<br/>Value loaded from taskId<br/>Value loaded from field org.projectforge.web.task.TaskSelectPanel.currentTaskId<br/>At TaskSelectPanel.java:[line 133]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77528');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.web.user.NewGroupSelectPanel$1.convertInput()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77528" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.web.user.NewGroupSelectPanel$1<br/>In method org.projectforge.web.user.NewGroupSelectPanel$1.convertInput()<br/>Actual type Integer<br/>Return value of org.projectforge.framework.persistence.entities.DefaultBaseDO.getId() of type Integer<br/>At NewGroupSelectPanel.java:[line 137]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N77608');">
+<td>
+<span class="priority-1">RC</span>
+</td>
+<td>Suspicious comparison of Integer references in org.projectforge.web.user.UserSelectPanel$1.convertInput()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N77608" style="display: none;">
+<a href="#RC_REF_COMPARISON">Bug type RC_REF_COMPARISON (click for details)</a>
+<br/>In class org.projectforge.web.user.UserSelectPanel$1<br/>In method org.projectforge.web.user.UserSelectPanel$1.convertInput()<br/>Actual type Integer<br/>Return value of org.projectforge.framework.persistence.entities.DefaultBaseDO.getId() of type Integer<br/>At UserSelectPanel.java:[line 142]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66485');">
+<td>
+<span class="priority-2">RCN</span>
+</td>
+<td>Nullcheck of LdapConnector.ldapConfig at line 95 of value previously dereferenced in org.projectforge.business.ldap.LdapConnector.createEnv(String, String)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66485" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">Bug type RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE (click for details)</a>
+<br/>In class org.projectforge.business.ldap.LdapConnector<br/>In method org.projectforge.business.ldap.LdapConnector.createEnv(String, String)<br/>Value loaded from field org.projectforge.business.ldap.LdapConnector.ldapConfig<br/>At LdapConnector.java:[line 86]<br/>Redundant null check at LdapConnector.java:[line 95]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69260');">
+<td>
+<span class="priority-1">RCN</span>
+</td>
+<td>Nullcheck of AbstractBaseDO.attributeMap at line 207 of value previously dereferenced in org.projectforge.framework.persistence.entities.AbstractBaseDO.setTransientAttribute(String, Object)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69260" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">Bug type RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE (click for details)</a>
+<br/>In class org.projectforge.framework.persistence.entities.AbstractBaseDO<br/>In method org.projectforge.framework.persistence.entities.AbstractBaseDO.setTransientAttribute(String, Object)<br/>Value loaded from field org.projectforge.framework.persistence.entities.AbstractBaseDO.attributeMap<br/>At AbstractBaseDO.java:[line 206]<br/>Redundant null check at AbstractBaseDO.java:[line 207]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N72751');">
+<td>
+<span class="priority-2">RCN</span>
+</td>
+<td>Nullcheck of target at line 181 of value previously dereferenced in org.projectforge.plugins.skillmatrix.SkillRatingEditForm$2.onModelSelected(AjaxRequestTarget, SkillDO)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N72751" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">Bug type RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE (click for details)</a>
+<br/>In class org.projectforge.plugins.skillmatrix.SkillRatingEditForm$2<br/>In method org.projectforge.plugins.skillmatrix.SkillRatingEditForm$2.onModelSelected(AjaxRequestTarget, SkillDO)<br/>Value loaded from target<br/>At SkillRatingEditForm.java:[line 180]<br/>Redundant null check at SkillRatingEditForm.java:[line 181]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75639');">
+<td>
+<span class="priority-1">RCN</span>
+</td>
+<td>Nullcheck of AbstractImportStoragePanel.errorPropertiesTable at line 131 of value previously dereferenced in org.projectforge.web.core.importstorage.AbstractImportStoragePanel.refresh()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75639" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">Bug type RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE (click for details)</a>
+<br/>In class org.projectforge.web.core.importstorage.AbstractImportStoragePanel<br/>In method org.projectforge.web.core.importstorage.AbstractImportStoragePanel.refresh()<br/>Value loaded from field org.projectforge.web.core.importstorage.AbstractImportStoragePanel.errorPropertiesTable<br/>At AbstractImportStoragePanel.java:[line 129]<br/>Redundant null check at AbstractImportStoragePanel.java:[line 131]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N74143');">
+<td>
+<span class="priority-2">RCN</span>
+</td>
+<td>Nullcheck of item at line 159 of value previously dereferenced in org.projectforge.web.FavoritesMenu.readFromXml(Element, MenuBuilderContext)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N74143" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">Bug type RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE (click for details)</a>
+<br/>In class org.projectforge.web.FavoritesMenu<br/>In method org.projectforge.web.FavoritesMenu.readFromXml(Element, MenuBuilderContext)<br/>Value loaded from item<br/>At FavoritesMenu.java:[line 139]<br/>Redundant null check at FavoritesMenu.java:[line 159]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75717');">
+<td>
+<span class="priority-2">RCN</span>
+</td>
+<td>Nullcheck of list at line 158 of value previously dereferenced in org.projectforge.web.fibu.AuftragListPage$3.populateItem(Item, String, IModel)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75717" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">Bug type RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE (click for details)</a>
+<br/>In class org.projectforge.web.fibu.AuftragListPage$3<br/>In method org.projectforge.web.fibu.AuftragListPage$3.populateItem(Item, String, IModel)<br/>Value loaded from list<br/>Return value of java.util.stream.Stream.collect(Collector) of type Object<br/>At AuftragListPage.java:[line 158]<br/>Redundant null check at AuftragListPage.java:[line 159]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77688');">
+<td>
+<span class="priority-2">RpC</span>
+</td>
+<td>Repeated conditional test in org.projectforge.web.wicket.MyAuthorizationStrategy.isInstantiationAuthorized(Class)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77688" style="display: none;">
+<a href="#RpC_REPEATED_CONDITIONAL_TEST">Bug type RpC_REPEATED_CONDITIONAL_TEST (click for details)</a>
+<br/>In class org.projectforge.web.wicket.MyAuthorizationStrategy<br/>In method org.projectforge.web.wicket.MyAuthorizationStrategy.isInstantiationAuthorized(Class)<br/>At MyAuthorizationStrategy.java:[line 59]<br/>At MyAuthorizationStrategy.java:[line 60]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66020');">
+<td>
+<span class="priority-1">RV</span>
+</td>
+<td>Return value of java.math.BigDecimal.setScale(int, RoundingMode) ignored in org.projectforge.business.fibu.AbstractRechnungsStatistik.add(BigDecimal, BigDecimal)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66020" style="display: none;">
+<a href="#RV_RETURN_VALUE_IGNORED">Bug type RV_RETURN_VALUE_IGNORED (click for details)</a>
+<br/>In class org.projectforge.business.fibu.AbstractRechnungsStatistik<br/>In method org.projectforge.business.fibu.AbstractRechnungsStatistik.add(BigDecimal, BigDecimal)<br/>Called method java.math.BigDecimal.setScale(int, RoundingMode)<br/>At AbstractRechnungsStatistik.java:[line 157]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66140');">
+<td>
+<span class="priority-1">RV</span>
+</td>
+<td>Return value of java.math.BigDecimal.setScale(int, RoundingMode) ignored in org.projectforge.business.fibu.AuftragsStatistik.add(BigDecimal, BigDecimal)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66140" style="display: none;">
+<a href="#RV_RETURN_VALUE_IGNORED">Bug type RV_RETURN_VALUE_IGNORED (click for details)</a>
+<br/>In class org.projectforge.business.fibu.AuftragsStatistik<br/>In method org.projectforge.business.fibu.AuftragsStatistik.add(BigDecimal, BigDecimal)<br/>Called method java.math.BigDecimal.setScale(int, RoundingMode)<br/>At AuftragsStatistik.java:[line 147]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N72044');">
+<td>
+<span class="priority-1">RV</span>
+</td>
+<td>Return value of java.math.BigDecimal.setScale(int, RoundingMode) ignored in org.projectforge.plugins.liquidityplanning.LiquidityEntriesStatistics.add(BigDecimal, BigDecimal)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N72044" style="display: none;">
+<a href="#RV_RETURN_VALUE_IGNORED">Bug type RV_RETURN_VALUE_IGNORED (click for details)</a>
+<br/>In class org.projectforge.plugins.liquidityplanning.LiquidityEntriesStatistics<br/>In method org.projectforge.plugins.liquidityplanning.LiquidityEntriesStatistics.add(BigDecimal, BigDecimal)<br/>Called method java.math.BigDecimal.setScale(int, RoundingMode)<br/>At LiquidityEntriesStatistics.java:[line 119]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67779');">
+<td>
+<span class="priority-2">USELESS_STRING</span>
+</td>
+<td>Invocation of toString on args in org.projectforge.common.BeanHelper.invoke(Object, Method, Object[])</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67779" style="display: none;">
+<a href="#DMI_INVOKING_TOSTRING_ON_ARRAY">Bug type DMI_INVOKING_TOSTRING_ON_ARRAY (click for details)</a>
+<br/>In class org.projectforge.common.BeanHelper<br/>In method org.projectforge.common.BeanHelper.invoke(Object, Method, Object[])<br/>Local variable named args<br/>At BeanHelper.java:[line 295]<br/>Another occurrence at BeanHelper.java:[line 299]<br/>Another occurrence at BeanHelper.java:[line 303]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70038');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.jira.JiraConfig.issueTypes</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70038" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.jira.JiraConfig<br/>Field org.projectforge.jira.JiraConfig.issueTypes<br/>At JiraConfig.java:[line 56]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N70087');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.mail.SendMailConfig.mailSessionLocalSettingsConfigModel</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N70087" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.mail.SendMailConfig<br/>Field org.projectforge.mail.SendMailConfig.mailSessionLocalSettingsConfigModel<br/>At SendMailConfig.java:[line 65]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N70476');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.plugins.eed.wicket.EmployeeSalaryImportForm.selectedMonth</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N70476" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.plugins.eed.wicket.EmployeeSalaryImportForm<br/>Field org.projectforge.plugins.eed.wicket.EmployeeSalaryImportForm.selectedMonth<br/>At EmployeeSalaryImportForm.java:[line 93]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75247');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.admin.GroovyConsoleForm.sql</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75247" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.admin.GroovyConsoleForm<br/>Field org.projectforge.web.admin.GroovyConsoleForm.sql<br/>At GroovyConsoleForm.java:[line 42]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75296');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.admin.LuceneConsoleForm.fieldList</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75296" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.admin.LuceneConsoleForm<br/>Field org.projectforge.web.admin.LuceneConsoleForm.fieldList<br/>At LuceneConsoleForm.java:[line 61]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75345');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.admin.LuceneConsoleForm.sql</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75345" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.admin.LuceneConsoleForm<br/>Field org.projectforge.web.admin.LuceneConsoleForm.sql<br/>At LuceneConsoleForm.java:[line 62]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75394');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.admin.SetupForm.calendarDomain</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75394" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.admin.SetupForm<br/>Field org.projectforge.web.admin.SetupForm.calendarDomain<br/>At SetupForm.java:[line 296]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75443');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.admin.SetupForm.feedbackEMail</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75443" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.admin.SetupForm<br/>Field org.projectforge.web.admin.SetupForm.feedbackEMail<br/>At SetupForm.java:[line 306]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75492');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.admin.SetupForm.sysopEMail</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75492" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.admin.SetupForm<br/>Field org.projectforge.web.admin.SetupForm.sysopEMail<br/>At SetupForm.java:[line 301]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75541');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.admin.SqlConsoleForm.sql</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75541" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.admin.SqlConsoleForm<br/>Field org.projectforge.web.admin.SqlConsoleForm.sql<br/>At SqlConsoleForm.java:[line 42]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75590');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.core.NavTopPanel$1.searchString</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75590" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.core.NavTopPanel$1<br/>Field org.projectforge.web.core.NavTopPanel$1.searchString<br/>At NavTopPanel.java:[line 142]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N75859');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.fibu.DatevImportStoragePanel.businessAssessmentLabel</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N75859" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.fibu.DatevImportStoragePanel<br/>Field org.projectforge.web.fibu.DatevImportStoragePanel.businessAssessmentLabel<br/>At DatevImportStoragePanel.java:[line 69]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N74213');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Field only ever set to null: org.projectforge.web.HtmlRequestBuilder.stringBuffer</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N74213" style="display: none;">
+<a href="#UWF_NULL_FIELD">Bug type UWF_NULL_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.HtmlRequestBuilder<br/>Field org.projectforge.web.HtmlRequestBuilder.stringBuffer<br/>In HtmlRequestBuilder.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76538');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.scripting.ScriptingForm.reportPathHeading</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76538" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.scripting.ScriptingForm<br/>Field org.projectforge.web.scripting.ScriptingForm.reportPathHeading<br/>At ScriptingForm.java:[line 56]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N77234');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.user.ChangePasswordForm.newPassword</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N77234" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.user.ChangePasswordForm<br/>Field org.projectforge.web.user.ChangePasswordForm.newPassword<br/>At ChangePasswordForm.java:[line 123]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77283');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.user.ChangePasswordForm.oldPassword</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77283" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.user.ChangePasswordForm<br/>Field org.projectforge.web.user.ChangePasswordForm.oldPassword<br/>At ChangePasswordForm.java:[line 115]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N77332');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.user.ChangePasswordForm.passwordRepeat</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N77332" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.user.ChangePasswordForm<br/>Field org.projectforge.web.user.ChangePasswordForm.passwordRepeat<br/>At ChangePasswordForm.java:[line 131]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77381');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.user.ChangeWlanPasswordForm.loginPassword</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77381" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.user.ChangeWlanPasswordForm<br/>Field org.projectforge.web.user.ChangeWlanPasswordForm.loginPassword<br/>At ChangeWlanPasswordForm.java:[line 109]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N77430');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.user.ChangeWlanPasswordForm.newWlanPassword</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N77430" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.user.ChangeWlanPasswordForm<br/>Field org.projectforge.web.user.ChangeWlanPasswordForm.newWlanPassword<br/>At ChangeWlanPasswordForm.java:[line 117]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N77479');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.user.ChangeWlanPasswordForm.wlanPasswordRepeat</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N77479" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.user.ChangeWlanPasswordForm<br/>Field org.projectforge.web.user.ChangeWlanPasswordForm.wlanPasswordRepeat<br/>At ChangeWlanPasswordForm.java:[line 125]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N77951');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.wicket.components.DropFileContainer$FormBean.importFileName</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N77951" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.wicket.components.DropFileContainer$FormBean<br/>Field org.projectforge.web.wicket.components.DropFileContainer$FormBean.importFileName<br/>At DropFileContainer.java:[line 141]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N78000');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.wicket.components.DropFileContainer$FormBean.importString</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N78000" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.wicket.components.DropFileContainer$FormBean<br/>Field org.projectforge.web.wicket.components.DropFileContainer$FormBean.importString<br/>At DropFileContainer.java:[line 139]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N78163');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten field: org.projectforge.web.wicket.flowlayout.ButtonPanel.label</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N78163" style="display: none;">
+<a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.wicket.flowlayout.ButtonPanel<br/>Field org.projectforge.web.wicket.flowlayout.ButtonPanel.label<br/>At ButtonPanel.java:[line 88]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_MT_CORRECTNESS">Multithreaded correctness Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66418');">
+<td>
+<span class="priority-2">DC</span>
+</td>
+<td>Possible doublecheck on org.projectforge.business.ldap.LdapConnector.initialized in org.projectforge.business.ldap.LdapConnector.init()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66418" style="display: none;">
+<a href="#DC_DOUBLECHECK">Bug type DC_DOUBLECHECK (click for details)</a>
+<br/>In class org.projectforge.business.ldap.LdapConnector<br/>In method org.projectforge.business.ldap.LdapConnector.init()<br/>On field org.projectforge.business.ldap.LdapConnector.initialized<br/>At LdapConnector.java:[lines 68-72]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69076');">
+<td>
+<span class="priority-2">LI</span>
+</td>
+<td>Incorrect lazy initialization and update of static field org.projectforge.framework.configuration.GlobalConfiguration.instance in org.projectforge.framework.configuration.GlobalConfiguration.createConfiguration(ConfigurationService)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69076" style="display: none;">
+<a href="#LI_LAZY_INIT_UPDATE_STATIC">Bug type LI_LAZY_INIT_UPDATE_STATIC (click for details)</a>
+<br/>In class org.projectforge.framework.configuration.GlobalConfiguration<br/>In method org.projectforge.framework.configuration.GlobalConfiguration.createConfiguration(ConfigurationService)<br/>On field org.projectforge.framework.configuration.GlobalConfiguration.instance<br/>At GlobalConfiguration.java:[lines 65-69]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65812');">
+<td>
+<span class="priority-2">LI</span>
+</td>
+<td>Incorrect lazy initialization of static field org.projectforge.ProjectForgeApp.instance in org.projectforge.ProjectForgeApp.shutdown()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65812" style="display: none;">
+<a href="#LI_LAZY_INIT_STATIC">Bug type LI_LAZY_INIT_STATIC (click for details)</a>
+<br/>In class org.projectforge.ProjectForgeApp<br/>In method org.projectforge.ProjectForgeApp.shutdown()<br/>On field org.projectforge.ProjectForgeApp.instance<br/>At ProjectForgeApp.java:[lines 102-107]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76306');">
+<td>
+<span class="priority-3">LI</span>
+</td>
+<td>Incorrect lazy initialization and update of static field org.projectforge.web.meb.SMSReceiverServletTest.loggerSpy in org.projectforge.web.meb.SMSReceiverServletTest.init()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76306" style="display: none;">
+<a href="#LI_LAZY_INIT_UPDATE_STATIC">Bug type LI_LAZY_INIT_UPDATE_STATIC (click for details)</a>
+<br/>In class org.projectforge.web.meb.SMSReceiverServletTest<br/>In method org.projectforge.web.meb.SMSReceiverServletTest.init()<br/>On field org.projectforge.web.meb.SMSReceiverServletTest.loggerSpy<br/>At SMSReceiverServletTest.java:[lines 180-181]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N76587');">
+<td>
+<span class="priority-2">LI</span>
+</td>
+<td>Incorrect lazy initialization and update of static field org.projectforge.web.selenium.SeleniumSuiteTestBase.driver in new org.projectforge.web.selenium.SeleniumSuiteTestBase()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N76587" style="display: none;">
+<a href="#LI_LAZY_INIT_UPDATE_STATIC">Bug type LI_LAZY_INIT_UPDATE_STATIC (click for details)</a>
+<br/>In class org.projectforge.web.selenium.SeleniumSuiteTestBase<br/>In method new org.projectforge.web.selenium.SeleniumSuiteTestBase()<br/>On field org.projectforge.web.selenium.SeleniumSuiteTestBase.driver<br/>At SeleniumSuiteTestBase.java:[lines 33-34]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69195');">
+<td>
+<span class="priority-2">ML</span>
+</td>
+<td>Synchronization on AbstractBaseDO.attributeMap in futile attempt to guard it</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69195" style="display: none;">
+<a href="#ML_SYNC_ON_FIELD_TO_GUARD_CHANGING_THAT_FIELD">Bug type ML_SYNC_ON_FIELD_TO_GUARD_CHANGING_THAT_FIELD (click for details)</a>
+<br/>In class org.projectforge.framework.persistence.entities.AbstractBaseDO<br/>In method org.projectforge.framework.persistence.entities.AbstractBaseDO.setTransientAttribute(String, Object)<br/>Field org.projectforge.framework.persistence.entities.AbstractBaseDO.attributeMap<br/>At AbstractBaseDO.java:[line 208]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65879');">
+<td>
+<span class="priority-2">STCAL</span>
+</td>
+<td>Call to method of static java.text.DateFormat in org.projectforge.business.address.AddressDao.exportVCard(PrintWriter, AddressDO)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65879" style="display: none;">
+<a href="#STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE">Bug type STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE (click for details)</a>
+<br/>In class org.projectforge.business.address.AddressDao<br/>In method org.projectforge.business.address.AddressDao.exportVCard(PrintWriter, AddressDO)<br/>Called method java.text.DateFormat.format(Date)<br/>Field org.projectforge.business.address.AddressDao.V_CARD_DATE_FORMAT<br/>At AddressDao.java:[line 446]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67364');">
+<td>
+<span class="priority-3">STCAL</span>
+</td>
+<td>Call to method of static java.text.DateFormat in org.projectforge.business.teamcal.event.model.TeamCalEventId.getDateFormat()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67364" style="display: none;">
+<a href="#STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE">Bug type STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE (click for details)</a>
+<br/>In class org.projectforge.business.teamcal.event.model.TeamCalEventId<br/>In method org.projectforge.business.teamcal.event.model.TeamCalEventId.getDateFormat()<br/>Called method java.text.DateFormat.clone()<br/>Field org.projectforge.business.teamcal.event.model.TeamCalEventId.FORMAT_COMPACT_DATE<br/>At TeamCalEventId.java:[line 114]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69339');">
+<td>
+<span class="priority-2">STCAL</span>
+</td>
+<td>Call to method of static java.text.DateFormat in org.projectforge.framework.persistence.history.DefaultHistoryFormatter.formatTimestamp(Session, Locale, Object, HistoryEntry, PropertyDelta)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69339" style="display: none;">
+<a href="#STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE">Bug type STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE (click for details)</a>
+<br/>In class org.projectforge.framework.persistence.history.DefaultHistoryFormatter<br/>In method org.projectforge.framework.persistence.history.DefaultHistoryFormatter.formatTimestamp(Session, Locale, Object, HistoryEntry, PropertyDelta)<br/>Called method java.text.SimpleDateFormat.format(Date)<br/>Field org.projectforge.framework.persistence.history.DefaultHistoryFormatter.sdf<br/>At DefaultHistoryFormatter.java:[line 94]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69499');">
+<td>
+<span class="priority-3">STCAL</span>
+</td>
+<td>Call to method of static java.text.DateFormat in org.projectforge.framework.time.DateHelper.getFilenameFormatDate(TimeZone)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69499" style="display: none;">
+<a href="#STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE">Bug type STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE (click for details)</a>
+<br/>In class org.projectforge.framework.time.DateHelper<br/>In method org.projectforge.framework.time.DateHelper.getFilenameFormatDate(TimeZone)<br/>Called method java.text.DateFormat.clone()<br/>Field org.projectforge.framework.time.DateHelper.FILENAME_FORMAT_DATE<br/>At DateHelper.java:[line 172]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69581');">
+<td>
+<span class="priority-3">STCAL</span>
+</td>
+<td>Call to method of static java.text.DateFormat in org.projectforge.framework.time.DateHelper.getFilenameFormatTimestamp(TimeZone)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69581" style="display: none;">
+<a href="#STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE">Bug type STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE (click for details)</a>
+<br/>In class org.projectforge.framework.time.DateHelper<br/>In method org.projectforge.framework.time.DateHelper.getFilenameFormatTimestamp(TimeZone)<br/>Called method java.text.DateFormat.clone()<br/>Field org.projectforge.framework.time.DateHelper.FILENAME_FORMAT_TIMESTAMP<br/>At DateHelper.java:[line 158]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69663');">
+<td>
+<span class="priority-3">STCAL</span>
+</td>
+<td>Call to method of static java.text.DateFormat in org.projectforge.framework.time.DateHelper.getIsoDateFormat(TimeZone)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69663" style="display: none;">
+<a href="#STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE">Bug type STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE (click for details)</a>
+<br/>In class org.projectforge.framework.time.DateHelper<br/>In method org.projectforge.framework.time.DateHelper.getIsoDateFormat(TimeZone)<br/>Called method java.text.DateFormat.clone()<br/>Field org.projectforge.framework.time.DateHelper.FORMAT_ISO_DATE<br/>At DateHelper.java:[line 130]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69745');">
+<td>
+<span class="priority-3">STCAL</span>
+</td>
+<td>Call to method of static java.text.DateFormat in org.projectforge.framework.time.DateHelper.getIsoTimestampFormat(TimeZone)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69745" style="display: none;">
+<a href="#STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE">Bug type STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE (click for details)</a>
+<br/>In class org.projectforge.framework.time.DateHelper<br/>In method org.projectforge.framework.time.DateHelper.getIsoTimestampFormat(TimeZone)<br/>Called method java.text.DateFormat.clone()<br/>Field org.projectforge.framework.time.DateHelper.FORMAT_ISO_TIMESTAMP<br/>At DateHelper.java:[line 144]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N71825');">
+<td>
+<span class="priority-2">STCAL</span>
+</td>
+<td>Call to method of static java.text.DateFormat in org.projectforge.plugins.ihkexport.IhkExporter.fillRow(double, Row, TimesheetDO)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N71825" style="display: none;">
+<a href="#STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE">Bug type STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE (click for details)</a>
+<br/>In class org.projectforge.plugins.ihkexport.IhkExporter<br/>In method org.projectforge.plugins.ihkexport.IhkExporter.fillRow(double, Row, TimesheetDO)<br/>Called method java.text.SimpleDateFormat.format(Date)<br/>Field org.projectforge.plugins.ihkexport.IhkExporter.sdf<br/>At IhkExporter.java:[line 90]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N71903');">
+<td>
+<span class="priority-2">STCAL</span>
+</td>
+<td>Call to method of static java.text.DateFormat in org.projectforge.plugins.ihkexport.IhkExporter.getExcel(List)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N71903" style="display: none;">
+<a href="#STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE">Bug type STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE (click for details)</a>
+<br/>In class org.projectforge.plugins.ihkexport.IhkExporter<br/>In method org.projectforge.plugins.ihkexport.IhkExporter.getExcel(List)<br/>Called method java.text.SimpleDateFormat.format(Date)<br/>Field org.projectforge.plugins.ihkexport.IhkExporter.sdf<br/>At IhkExporter.java:[line 59]<br/>Another occurrence at IhkExporter.java:[line 60]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65548');">
+<td>
+<span class="priority-2">UG</span>
+</td>
+<td>org.lesscss.LessCompiler.getCustomJs() is unsynchronized, org.lesscss.LessCompiler.setCustomJs(List) is synchronized</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65548" style="display: none;">
+<a href="#UG_SYNC_SET_UNSYNC_GET">Bug type UG_SYNC_SET_UNSYNC_GET (click for details)</a>
+<br/>In class org.lesscss.LessCompiler<br/>In method org.lesscss.LessCompiler.getCustomJs()<br/>In method org.lesscss.LessCompiler.setCustomJs(List)<br/>At LessCompiler.java:[line 138]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65614');">
+<td>
+<span class="priority-2">UG</span>
+</td>
+<td>org.lesscss.LessCompiler.getEncoding() is unsynchronized, org.lesscss.LessCompiler.setEncoding(String) is synchronized</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65614" style="display: none;">
+<a href="#UG_SYNC_SET_UNSYNC_GET">Bug type UG_SYNC_SET_UNSYNC_GET (click for details)</a>
+<br/>In class org.lesscss.LessCompiler<br/>In method org.lesscss.LessCompiler.getEncoding()<br/>In method org.lesscss.LessCompiler.setEncoding(String)<br/>At LessCompiler.java:[line 198]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65680');">
+<td>
+<span class="priority-2">UG</span>
+</td>
+<td>org.lesscss.LessCompiler.getEnvJs() is unsynchronized, org.lesscss.LessCompiler.setEnvJs(URL) is synchronized</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65680" style="display: none;">
+<a href="#UG_SYNC_SET_UNSYNC_GET">Bug type UG_SYNC_SET_UNSYNC_GET (click for details)</a>
+<br/>In class org.lesscss.LessCompiler<br/>In method org.lesscss.LessCompiler.getEnvJs()<br/>In method org.lesscss.LessCompiler.setEnvJs(URL)<br/>At LessCompiler.java:[line 92]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65746');">
+<td>
+<span class="priority-2">UG</span>
+</td>
+<td>org.lesscss.LessCompiler.getLessJs() is unsynchronized, org.lesscss.LessCompiler.setLessJs(URL) is synchronized</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65746" style="display: none;">
+<a href="#UG_SYNC_SET_UNSYNC_GET">Bug type UG_SYNC_SET_UNSYNC_GET (click for details)</a>
+<br/>In class org.lesscss.LessCompiler<br/>In method org.lesscss.LessCompiler.getLessJs()<br/>In method org.lesscss.LessCompiler.setLessJs(URL)<br/>At LessCompiler.java:[line 115]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_STYLE">Dodgy code Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66088');">
+<td>
+<span class="priority-3">DLS</span>
+</td>
+<td>Useless assignment in return from org.projectforge.business.fibu.AuftragDao.getNextNumber(AuftragDO)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66088" style="display: none;">
+<a href="#DLS_DEAD_LOCAL_STORE_IN_RETURN">Bug type DLS_DEAD_LOCAL_STORE_IN_RETURN (click for details)</a>
+<br/>In class org.projectforge.business.fibu.AuftragDao<br/>In method org.projectforge.business.fibu.AuftragDao.getNextNumber(AuftragDO)<br/>At AuftragDao.java:[line 686]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66208');">
+<td>
+<span class="priority-3">DLS</span>
+</td>
+<td>Useless assignment in return from org.projectforge.business.fibu.RechnungDao.getNextNumber(RechnungDO)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66208" style="display: none;">
+<a href="#DLS_DEAD_LOCAL_STORE_IN_RETURN">Bug type DLS_DEAD_LOCAL_STORE_IN_RETURN (click for details)</a>
+<br/>In class org.projectforge.business.fibu.RechnungDao<br/>In method org.projectforge.business.fibu.RechnungDao.getNextNumber(RechnungDO)<br/>At RechnungDao.java:[line 386]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N75181');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Read of unwritten public or protected field reindexFromDatePanel in org.projectforge.web.admin.AdminPage.select(String, Object)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N75181" style="display: none;">
+<a href="#NP_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD">Bug type NP_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class org.projectforge.web.admin.AdminPage<br/>In method org.projectforge.web.admin.AdminPage.select(String, Object)<br/>Field org.projectforge.web.admin.AdminForm.reindexFromDatePanel<br/>At AdminPage.java:[line 551]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N76235');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference in org.projectforge.web.i18n.I18NServiceImpl.loadResourceBundles() due to return value of called method</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N76235" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Bug type NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE (click for details)</a>
+<br/>In class org.projectforge.web.i18n.I18NServiceImpl<br/>In method org.projectforge.web.i18n.I18NServiceImpl.loadResourceBundles()<br/>Value loaded from ?<br/>Dereferenced at I18NServiceImpl.java:[line 56]<br/>Known null at I18NServiceImpl.java:[line 56]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66352');">
+<td>
+<span class="priority-1">UC</span>
+</td>
+<td>Useless condition: it's known that this.labelScale &gt; 15 at this point</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66352" style="display: none;">
+<a href="#UC_USELESS_CONDITION">Bug type UC_USELESS_CONDITION (click for details)</a>
+<br/>In class org.projectforge.business.gantt.GanttChartXLabelBarRenderer<br/>In method org.projectforge.business.gantt.GanttChartXLabelBarRenderer.draw(Document, Element, Element, double)<br/>Value this.labelScale &gt; 15<br/>Unreachable code at GanttChartXLabelBarRenderer.java:[line 264]<br/>At GanttChartXLabelBarRenderer.java:[line 262]</p>
+</td>
+</tr>
+</table>
+<h1>
+<a name="Details">Details</a>
+</h1>
+<h2>
+<a name="BC_IMPOSSIBLE_INSTANCEOF">BC_IMPOSSIBLE_INSTANCEOF: instanceof will always return false</a>
+</h2>
+
+<p>
+This instanceof test will always return false. Although this is safe, make sure it isn't
+an indication of some misunderstanding or some other logic error.
+</p>
+
+    
+<h2>
+<a name="CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE">CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE: Class defines clone() but doesn't implement Cloneable</a>
+</h2>
+
+<p> This class defines a clone() method but the class doesn't implement Cloneable.
+There are some situations in which this is OK (e.g., you want to control how subclasses
+can clone themselves), but just make sure that this is what you intended.
+</p>
+
+    
+<h2>
+<a name="CN_IDIOM_NO_SUPER_CALL">CN_IDIOM_NO_SUPER_CALL: clone method does not call super.clone()</a>
+</h2>
+
+<p> This non-final class defines a clone() method that does not call super.clone().
+If this class ("<i>A</i>") is extended by a subclass ("<i>B</i>"),
+and the subclass <i>B</i> calls super.clone(), then it is likely that
+<i>B</i>'s clone() method will return an object of type <i>A</i>,
+which violates the standard contract for clone().</p>
+
+<p> If all clone() methods call super.clone(), then they are guaranteed
+to use Object.clone(), which always returns an object of the correct type.</p>
+
+    
+<h2>
+<a name="DC_DOUBLECHECK">DC_DOUBLECHECK: Possible double check of field</a>
+</h2>
+
+  <p> This method may contain an instance of double-checked locking.&nbsp;
+  This idiom is not correct according to the semantics of the Java memory
+  model.&nbsp; For more information, see the web page
+  <a href="http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html"
+  >http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html</a>.</p>
+
+    
+<h2>
+<a name="DLS_DEAD_LOCAL_STORE_IN_RETURN">DLS_DEAD_LOCAL_STORE_IN_RETURN: Useless assignment in return statement</a>
+</h2>
+      
+<p>
+This statement assigns to a local variable in a return statement. This assignment
+has effect. Please verify that this statement does the right thing.
+</p>
+
+    
+<h2>
+<a name="DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE">DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE: BigDecimal constructed from double that isn't represented precisely</a>
+</h2>
+      
+    <p>
+This code creates a BigDecimal from a double value that doesn't translate well to a
+decimal number.
+For example, one might assume that writing new BigDecimal(0.1) in Java creates a BigDecimal which is exactly equal to 0.1 (an unscaled value of 1, with a scale of 1), but it is actually equal to 0.1000000000000000055511151231257827021181583404541015625.
+You probably want to use the BigDecimal.valueOf(double d) method, which uses the String representation
+of the double to create the BigDecimal (e.g., BigDecimal.valueOf(0.1) gives 0.1).
+</p>
+
+
+    
+<h2>
+<a name="DMI_DOH">DMI_DOH: D'oh! A nonsensical method invocation</a>
+</h2>
+      
+    <p>
+This partical method invocation doesn't make sense, for reasons that should be apparent from inspection.
+</p>
+
+
+    
+<h2>
+<a name="EC_UNRELATED_TYPES">EC_UNRELATED_TYPES: Call to equals() comparing different types</a>
+</h2>
+
+<p> This method calls equals(Object) on two references of different
+class types and analysis suggests they will be to objects of different classes 
+at runtime. Further, examination of the equals methods that would be invoked suggest that either
+this call will always return false, or else the equals method is not be symmetric (which is 
+a property required by the contract
+for equals in class Object). 
+</p>
+
+    
+<h2>
+<a name="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS: Equals checks for incompatible operand</a>
+</h2>
+
+  <p> This equals method is checking to see if the argument is some incompatible type
+(i.e., a class that is neither a supertype nor subtype of the class that defines
+the equals method). For example, the Foo class might have an equals method
+that looks like:
+</p>
+<pre>
+public boolean equals(Object o) {
+  if (o instanceof Foo)
+    return name.equals(((Foo)o).name);
+  else if (o instanceof String)
+    return name.equals(o);
+  else return false;
+</pre>
+
+<p>This is considered bad practice, as it makes it very hard to implement an equals method that
+is symmetric and transitive. Without those properties, very unexpected behavoirs are possible.
+</p>
+
+    
+<h2>
+<a name="ES_COMPARING_STRINGS_WITH_EQ">ES_COMPARING_STRINGS_WITH_EQ: Comparison of String objects using == or !=</a>
+</h2>
+
+  <p>This code compares <code>java.lang.String</code> objects for reference
+equality using the == or != operators.
+Unless both strings are either constants in a source file, or have been
+interned using the <code>String.intern()</code> method, the same string
+value may be represented by two different String objects. Consider
+using the <code>equals(Object)</code> method instead.</p>
+
+    
+<h2>
+<a name="IL_INFINITE_RECURSIVE_LOOP">IL_INFINITE_RECURSIVE_LOOP: An apparent infinite recursive loop</a>
+</h2>
+
+<p>This method unconditionally invokes itself. This would seem to indicate
+an infinite recursive loop that will result in a stack overflow.</p>
+
+    
+<h2>
+<a name="LI_LAZY_INIT_UPDATE_STATIC">LI_LAZY_INIT_UPDATE_STATIC: Incorrect lazy initialization and update of static field</a>
+</h2>
+
+<p> This method contains an unsynchronized lazy initialization of a static field.
+After the field is set, the object stored into that location is further updated or accessed.
+The setting of the field is visible to other threads as soon as it is set. If the
+futher accesses in the method that set the field serve to initialize the object, then
+you have a <em>very serious</em> multithreading bug, unless something else prevents
+any other thread from accessing the stored object until it is fully initialized.
+</p>
+<p>Even if you feel confident that the method is never called by multiple
+threads, it might be better to not set the static field until the value
+you are setting it to is fully populated/initialized.
+
+    
+<h2>
+<a name="LI_LAZY_INIT_STATIC">LI_LAZY_INIT_STATIC: Incorrect lazy initialization of static field</a>
+</h2>
+
+<p> This method contains an unsynchronized lazy initialization of a non-volatile static field.
+Because the compiler or processor may reorder instructions,
+threads are not guaranteed to see a completely initialized object,
+<em>if the method can be called by multiple threads</em>.
+You can make the field volatile to correct the problem.
+For more information, see the
+<a href="http://www.cs.umd.edu/~pugh/java/memoryModel/">Java Memory Model web site</a>.
+</p>
+
+    
+<h2>
+<a name="MF_CLASS_MASKS_FIELD">MF_CLASS_MASKS_FIELD: Class defines field that masks a superclass field</a>
+</h2>
+
+<p> This class defines a field with the same name as a visible
+instance field in a superclass.  This is confusing, and
+may indicate an error if methods update or access one of
+the fields when they wanted the other.</p>
+
+    
+<h2>
+<a name="ML_SYNC_ON_FIELD_TO_GUARD_CHANGING_THAT_FIELD">ML_SYNC_ON_FIELD_TO_GUARD_CHANGING_THAT_FIELD: Synchronization on field in futile attempt to guard that field</a>
+</h2>
+
+  <p> This method synchronizes on a field in what appears to be an attempt
+to guard against simultaneous updates to that field. But guarding a field
+gets a lock on the referenced object, not on the field. This may not
+provide the mutual exclusion you need, and other threads might
+be obtaining locks on the referenced objects (for other purposes). An example
+of this pattern would be:</p>
+<pre>
+private Long myNtfSeqNbrCounter = new Long(0);
+private Long getNotificationSequenceNumber() {
+     Long result = null;
+     synchronized(myNtfSeqNbrCounter) {
+         result = new Long(myNtfSeqNbrCounter.longValue() + 1);
+         myNtfSeqNbrCounter = new Long(result.longValue());
+     }
+     return result;
+ }
+</pre>
+
+    
+<h2>
+<a name="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS">NM_SAME_SIMPLE_NAME_AS_SUPERCLASS: Class names shouldn't shadow simple name of superclass</a>
+</h2>
+
+  <p> This class has a simple name that is identical to that of its superclass, except
+that its superclass is in a different package (e.g., <code>alpha.Foo</code> extends <code>beta.Foo</code>).
+This can be exceptionally confusing, create lots of situations in which you have to look at import statements
+to resolve references and creates many
+opportunities to accidentally define methods that do not override methods in their superclasses.
+</p>
+
+    
+<h2>
+<a name="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT">NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT: equals() method does not check for null argument</a>
+</h2>
+      
+      <p>
+      This implementation of equals(Object) violates the contract defined
+      by java.lang.Object.equals() because it does not check for null
+      being passed as the argument.  All equals() methods should return
+      false if passed a null value.
+      </p>
+      
+   
+<h2>
+<a name="NP_NULL_PARAM_DEREF">NP_NULL_PARAM_DEREF: Method call passes null for non-null parameter</a>
+</h2>
+      
+      <p>
+      This method call passes a null value for a non-null method parameter.
+    Either the parameter is annotated as a parameter that should
+    always be non-null, or analysis has shown that it will always be
+    dereferenced.
+      </p>
+      
+   
+<h2>
+<a name="NP_BOOLEAN_RETURN_NULL">NP_BOOLEAN_RETURN_NULL: Method with Boolean return type returns explicit null</a>
+</h2>
+       
+       <p>
+    A method that returns either Boolean.TRUE, Boolean.FALSE or null is an accident waiting to happen.
+    This method can be invoked as though it returned a value of type boolean, and
+    the compiler will insert automatic unboxing of the Boolean value. If a null value is returned,
+    this will result in a NullPointerException.
+       </p>
+       
+       
+<h2>
+<a name="NP_NULL_PARAM_DEREF_NONVIRTUAL">NP_NULL_PARAM_DEREF_NONVIRTUAL: Non-virtual method call passes null for non-null parameter</a>
+</h2>
+      
+      <p>
+      A possibly-null value is passed to a non-null method parameter.
+    Either the parameter is annotated as a parameter that should
+    always be non-null, or analysis has shown that it will always be
+    dereferenced.
+      </p>
+      
+   
+<h2>
+<a name="NP_ALWAYS_NULL">NP_ALWAYS_NULL: Null pointer dereference</a>
+</h2>
+
+<p> A null pointer is dereferenced here.&nbsp; This will lead to a
+<code>NullPointerException</code> when the code is executed.</p>
+
+    
+<h2>
+<a name="NP_NULL_ON_SOME_PATH">NP_NULL_ON_SOME_PATH: Possible null pointer dereference</a>
+</h2>
+
+<p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception can't ever be executed; deciding that is beyond the ability of FindBugs.
+</p>
+
+    
+<h2>
+<a name="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE: Possible null pointer dereference due to return value of called method</a>
+</h2>
+      
+<p> The return value from a method is dereferenced without a null check,
+and the return value of that method is one that should generally be checked
+for null.  This may lead to a <code>NullPointerException</code> when the code is executed.
+</p>
+      
+   
+<h2>
+<a name="NP_NULL_ON_SOME_PATH_EXCEPTION">NP_NULL_ON_SOME_PATH_EXCEPTION: Possible null pointer dereference in method on exception path</a>
+</h2>
+
+<p> A reference value which is null on some exception control path is
+dereferenced here.&nbsp; This may lead to a <code>NullPointerException</code>
+when the code is executed.&nbsp;
+Note that because FindBugs currently does not prune infeasible exception paths,
+this may be a false warning.</p>
+
+<p> Also note that FindBugs considers the default case of a switch statement to
+be an exception path, since the default case is often infeasible.</p>
+
+    
+<h2>
+<a name="NP_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD">NP_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD: Read of unwritten public or protected field</a>
+</h2>
+
+  <p> The program is dereferencing a public or protected
+field that does not seem to ever have a non-null value written to it.
+Unless the field is initialized via some mechanism not seen by the analysis,
+dereferencing this value will generate a null pointer exception.
+</p>
+
+    
+<h2>
+<a name="NP_TOSTRING_COULD_RETURN_NULL">NP_TOSTRING_COULD_RETURN_NULL: toString method may return null</a>
+</h2>
+      
+      <p>
+    This toString method seems to return null in some circumstances. A liberal reading of the
+    spec could be interpreted as allowing this, but it is probably a bad idea and could cause
+    other code to break. Return the empty string or some other appropriate string rather than null.
+      </p>
+      
+   
+<h2>
+<a name="RC_REF_COMPARISON">RC_REF_COMPARISON: Suspicious reference comparison</a>
+</h2>
+
+<p> This method compares two reference values using the == or != operator,
+where the correct way to compare instances of this type is generally
+with the equals() method.
+It is possible to create distinct instances that are equal but do not compare as == since
+they are different objects.
+Examples of classes which should generally
+not be compared by reference are java.lang.Integer, java.lang.Float, etc.</p>
+
+    
+<h2>
+<a name="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE: Nullcheck of value previously dereferenced</a>
+</h2>
+
+<p> A value is checked here to see whether it is null, but this value can't
+be null because it was previously dereferenced and if it were null a null pointer
+exception would have occurred at the earlier dereference.
+Essentially, this code and the previous dereference
+disagree as to whether this value is allowed to be null. Either the check is redundant
+or the previous dereference is erroneous.</p>
+
+    
+<h2>
+<a name="RpC_REPEATED_CONDITIONAL_TEST">RpC_REPEATED_CONDITIONAL_TEST: Repeated conditional tests</a>
+</h2>
+
+<p>The code contains a conditional test is performed twice, one right after the other
+(e.g., <code>x == 0 || x == 0</code>). Perhaps the second occurrence is intended to be something else
+(e.g., <code>x == 0 || y == 0</code>).
+</p>
+
+    
+<h2>
+<a name="RV_RETURN_VALUE_IGNORED">RV_RETURN_VALUE_IGNORED: Method ignores return value</a>
+</h2>
+
+   <p> The return value of this method should be checked. One common
+cause of this warning is to invoke a method on an immutable object,
+thinking that it updates the object. For example, in the following code
+fragment,</p>
+<blockquote>
+<pre>
+String dateString = getHeaderField(name);
+dateString.trim();
+</pre>
+</blockquote>
+<p>the programmer seems to be thinking that the trim() method will update
+the String referenced by dateString. But since Strings are immutable, the trim()
+function returns a new String value, which is being ignored here. The code
+should be corrected to: </p>
+<blockquote>
+<pre>
+String dateString = getHeaderField(name);
+dateString = dateString.trim();
+</pre>
+</blockquote>
+
+    
+<h2>
+<a name="SE_BAD_FIELD">SE_BAD_FIELD: Non-transient non-serializable instance field in serializable class</a>
+</h2>
+
+<p> This Serializable class defines a non-primitive instance field which is neither transient,
+Serializable, or <code>java.lang.Object</code>, and does not appear to implement
+the <code>Externalizable</code> interface or the
+<code>readObject()</code> and <code>writeObject()</code> methods.&nbsp;
+Objects of this class will not be deserialized correctly if a non-Serializable
+object is stored in this field.</p>
+
+    
+<h2>
+<a name="STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE">STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE: Call to static DateFormat</a>
+</h2>
+
+<p>As the JavaDoc states, DateFormats are inherently unsafe for multithreaded use.
+The detector has found a call to an instance of DateFormat that has been obtained via a static
+field. This looks suspicous.</p>
+<p>For more information on this see <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6231579">Sun Bug #6231579</a>
+and <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6178997">Sun Bug #6178997</a>.</p>
+
+
+<h2>
+<a name="UC_USELESS_CONDITION">UC_USELESS_CONDITION: Condition has no effect</a>
+</h2>
+
+<p>This condition always produces the same result as the value of the involved variable was narrowed before. 
+Probably something else was meant or condition can be removed.</p>
+
+    
+<h2>
+<a name="UG_SYNC_SET_UNSYNC_GET">UG_SYNC_SET_UNSYNC_GET: Unsynchronized get method, synchronized set method</a>
+</h2>
+
+  <p> This class contains similarly-named get and set
+  methods where the set method is synchronized and the get method is not.&nbsp;
+  This may result in incorrect behavior at runtime, as callers of the get
+  method will not necessarily see a consistent state for the object.&nbsp;
+  The get method should be made synchronized.</p>
+
+    
+<h2>
+<a name="DMI_INVOKING_TOSTRING_ON_ARRAY">DMI_INVOKING_TOSTRING_ON_ARRAY: Invocation of toString on an array</a>
+</h2>
+
+<p>
+The code invokes toString on an array, which will generate a fairly useless result
+such as [C@16f0472. Consider using Arrays.toString to convert the array into a readable
+String that gives the contents of the array. See Programming Puzzlers, chapter 3, puzzle 12.
+</p>
+
+    
+<h2>
+<a name="UWF_NULL_FIELD">UWF_NULL_FIELD: Field only ever set to null</a>
+</h2>
+
+  <p> All writes to this field are of the constant value null, and thus
+all reads of the field will return null.
+Check for errors, or remove it if it is useless.</p>
+
+    
+<h2>
+<a name="UWF_UNWRITTEN_FIELD">UWF_UNWRITTEN_FIELD: Unwritten field</a>
+</h2>
+
+  <p> This field is never written.&nbsp; All reads of it will return the default
+value. Check for errors (should it have been initialized?), or remove it if it is useless.</p>
+
+    </body>
+</html>
